@@ -1,13 +1,4 @@
-@import url(style.css);
-:root {
-    --color-one: #779882 ;
-    --color-two: #425348 ;
-    --color-three: #F3F4EF;
-    --color-four: #3C3C3C;
-    --font-one: Roboto, sans-serif;
-
-}
-
+@import url(style.scss);
 
 
 /***
