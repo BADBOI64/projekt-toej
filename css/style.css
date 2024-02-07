@@ -1,0 +1,132 @@
+@import url(cssReset.css);
+main {
+  background-color: #ece5db;
+}
+
+header {
+  position: fixed;
+  background-color: #ece5db;
+  z-index: 10;
+  width: 100%;
+}
+header nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+}
+header nav img {
+  height: 40px;
+  width: auto;
+}
+header img {
+  height: 40px;
+  width: auto;
+}
+
+.hero {
+  height: 55svh;
+}
+.hero video {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.offers {
+  padding: 4rem;
+}
+.offers .offer-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 5fr 2.5fr;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+}
+.offers .offer-grid .offer-box1 {
+  grid-area: 1/1/3/2;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.offers .offer-grid .offer-box2 {
+  grid-area: 1/2/2/4;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.offers .offer-grid .offer-box3 {
+  grid-area: 1/4/3/5;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.offers .offer-grid .offer-box4 {
+  grid-area: 2/2/3/3;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.offers .offer-grid .offer-box5 {
+  grid-area: 2/3/3/4;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.info {
+  width: 100svw;
+  padding: 1rem 4rem;
+  text-align: center;
+}
+.info .info-con {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  gap: 0;
+}
+.info .info-con .info-box img {
+  border-radius: 50%;
+  aspect-ratio: 1/1;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 120px;
+}
+
+.parent {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+}
+
+.div1 {
+  grid-area: 1/1/3/2;
+}
+
+.div2 {
+  grid-area: 1/2/2/4;
+}
+
+.div3 {
+  grid-area: 1/4/3/5;
+}
+
+.div4 {
+  grid-area: 2/2/3/3;
+}
+
+.div5 {
+  grid-area: 2/3/3/4;
+}
+
+.div6 {
+  grid-area: 3/1/5/3;
+}
+
+.div7 {
+  grid-area: 3/3/4/5;
+}
+
+.div8 {
+  grid-area: 4/3/5/5;
+}/*# sourceMappingURL=style.css.map */
