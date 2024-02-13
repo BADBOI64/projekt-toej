@@ -1,9 +1,12 @@
 @use "cssReset";
 
+@import url("https://use.typekit.net/yqg7pai.css");
+
 $font-family-primary: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-$font-family-secondary: "Roboto", sans-serif;
+$font-family-secondary: "futura pt", sans-serif;
 $font-size: 16px;
-$font-weight: 400;
+$font-bold: 600;
+$font-light: 300;
 $line-height: 1.5;
 $color-off-white: #fdfbf9;
 $color-black: #0d0a06;
@@ -42,6 +45,27 @@ $main-padding: 5em;
   justify-content: $justify-content;
   align-items: $align-items;
   gap: $gap;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $font-family-secondary;
+  font-weight: $font-bold;
+  line-height: $line-height;
+  margin: 0;
+  padding: 0;
+}
+p,
+a {
+  font-family: $font-family-secondary;
+  font-weight: $font-light;
+  line-height: $line-height;
+  margin: 0;
+  padding: 0;
 }
 
 header {
@@ -218,6 +242,44 @@ header {
         height: 30px;
         text-align: center;
       }
+    }
+  }
+}
+
+footer {
+  padding: 3em $main-padding;
+  background-color: $color-beige;
+  margin-top: 3em;
+
+  .footer-con {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+    padding-bottom: 1em;
+    .footer-box1 {
+      grid-area: 1 / 1 / 2 / 7;
+      img {
+        height: 40px;
+        width: auto;
+      }
+    }
+    .footer-box2 {
+      @include display-flex(column, flex-start, flex-start, 0);
+      grid-area: 1 / 7 / 2 / 9;
+    }
+    .footer-box3 {
+      @include display-flex(column, flex-start, flex-start, 0);
+      grid-area: 1 / 10 / 2 / 13;
+    }
+  }
+  .footer-buttombox {
+    @include display-flex(row, center, center, 15px);
+    padding: 1rem 0;
+    border-top: 2px solid $color-black;
+    i {
+      font-size: 1.2rem;
     }
   }
 }

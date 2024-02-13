@@ -1,4 +1,5 @@
 @charset "UTF-8";
+@import url("https://use.typekit.net/yqg7pai.css");
 /***
     The new CSS reset - version 1.8.5 (last updated 14.6.2023)
     GitHub page: https://github.com/elad2412/the-new-css-reset
@@ -105,6 +106,28 @@ meter {
   position: absolute;
   white-space: nowrap;
   width: 1px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "futura pt", sans-serif;
+  font-weight: 600;
+  line-height: 1.5;
+  margin: 0;
+  padding: 0;
+}
+
+p,
+a {
+  font-family: "futura pt", sans-serif;
+  font-weight: 300;
+  line-height: 1.5;
+  margin: 0;
+  padding: 0;
 }
 
 header {
@@ -301,4 +324,53 @@ header img {
   border: 1px solid #0d0a06;
   height: 30px;
   text-align: center;
+}
+
+footer {
+  padding: 3em 5em;
+  background-color: #ece5db;
+  margin-top: 3em;
+}
+footer .footer-con {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: 1fr;
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
+  padding-bottom: 1em;
+}
+footer .footer-con .footer-box1 {
+  grid-area: 1/1/2/7;
+}
+footer .footer-con .footer-box1 img {
+  height: 40px;
+  width: auto;
+}
+footer .footer-con .footer-box2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 0;
+  grid-area: 1/7/2/9;
+}
+footer .footer-con .footer-box3 {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 0;
+  grid-area: 1/10/2/13;
+}
+footer .footer-buttombox {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  padding: 1rem 0;
+  border-top: 2px solid #0d0a06;
+}
+footer .footer-buttombox i {
+  font-size: 1.2rem;
 }/*# sourceMappingURL=style.css.map */
