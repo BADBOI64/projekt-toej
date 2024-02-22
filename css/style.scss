@@ -10,116 +10,90 @@
   }
 }
 
-.offers {
-  padding: 7rem stand.$main-padding;
-  .offer-grid {
-    @include stand.display-grid;
-    grid-template-rows: 43svh 40svh;
+main {
+  @include stand.display-grid;
+  background-color: stand.$color-bg;
+}
 
-    .offer-box1 {
-      grid-area: 1 / 4 / 2 / 10;
-      background-color: red;
-    }
-    .offer-box2 {
-      grid-area: 2 / 4 / 3 / 7;
-      object-fit: cover;
-      background-color: blue;
-    }
-    .offer-box3 {
-      grid-area: 2 / 7 / 3 / 10;
-      object-fit: cover;
-      background-color: green;
-    }
-    .offer-box4 {
-      grid-area: 1 / 1 / 3 / 4;
-      object-fit: cover;
-      background-color: yellow;
-    }
-    .offer-box5 {
-      grid-area: 1 / 10 / 3 / 13;
-      object-fit: cover;
-      background-color: orange;
-    }
+.hero {
+  height: 45svh;
+
+  video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
 }
 
-.info {
-  padding: 1rem stand.$main-padding;
+.welcome {
+  grid-column: 1/13;
   text-align: center;
-  h2 {
-    font-size: 2rem;
-    margin-bottom: 1em;
+
+  h1 {
+    font-size: 3rem;
+    font-family: stand.$font-family-secondary;
   }
-  .info-con {
-    @include stand.display-flex(row, space-around, center, 0);
 
-    .info-box {
-      @include stand.display-flex(column, center, center, 0);
-
-      i {
-        @include stand.circle(black);
-
-        @include stand.display-flex(row, center, center, 0);
-        width: 80px;
-        color: stand.$color-off-white;
-        font-size: 2rem;
-      }
-    }
+  p {
+    font-size: 1.2rem;
+    font-family: stand.$font-family-primary;
   }
 }
+
 .cases {
   padding: 7em stand.$main-padding;
-  h3 {
+  grid-column: 1/13;
+
+  @include stand.display-grid;
+  grid-template-rows: repeat(4, 1fr);
+  h2 {
+    grid-area: 1 / 4 / 2 / 8;
     font-size: 2rem;
-    margin-bottom: 1em;
-    text-align: center;
   }
-
-  .cases-container {
-    @include stand.display-grid;
-    grid-template-rows: 20svh 20svh 20svh 20svh;
-
-    .cb1 {
-      grid-area: 1 / 4 / 2 / 10;
-      background-color: red;
-    }
-    .cb2 {
-      grid-area: 2 / 4 / 3 / 7;
-      background-color: blue;
-    }
-    .cb3 {
-      grid-area: 2 / 7 / 3 / 10;
-      background-color: green;
-    }
-    .cb4 {
-      grid-area: 1 / 1 / 3 / 4;
-      background-color: yellow;
-    }
-    .cb5 {
-      grid-area: 1 / 10 / 3 / 13;
-      background-color: orange;
-    }
-    .cb6 {
-      grid-area: 3 / 1 / 5 / 7;
-      background-color: pink;
-    }
-    .cb7 {
-      grid-area: 3 / 7 / 4 / 13;
-      background-color: purple;
-    }
-    .cb8 {
-      grid-area: 4 / 7 / 5 / 13;
-      background-color: stand.$color-cafe-lette;
-    }
+  p {
+    grid-area: 2 / 4 / 3 / 8;
   }
 }
 
-.kontakt {
+.skills {
+  grid-column: 1/13;
+}
+
+.creative-solotion {
+  grid-column: 1/13;
+
+  img {
+    width: 35%;
+    height: auto;
+    grid-column: 1/6;
+  }
+}
+
+.vision {
+  grid-column: 1/13;
+
+  img {
+    width: 35%;
+    height: auto;
+    grid-column: 1/6;
+  }
+}
+
+.who-we-are {
+  grid-column: 1/13;
+}
+
+.adventure {
+  grid-column: 1/13;
+}
+
+.contact {
   padding: 0 stand.$main-padding;
-  .kontakt-formular {
+
+  .contact-form {
     height: 30svh;
 
-    background-color: stand.$color-cafe-lette;
+    background-color: stand.$color-bg;
     @include stand.display-flex(column, center, center, 0);
 
     h3 {
@@ -134,20 +108,21 @@
 
     .email-submit {
       @include stand.display-flex(row, space-around, center, 0);
-      background-color: stand.$color-off-white;
+      background-color: stand.$color-green;
       margin-top: 0.5rem;
 
       .mail {
-        // border: 1px solid stand.$color-black;
+        border: 1px solid stand.$color-bg;
         // border-left: 1px solid $color-black;
         // border-top: 1px solid $color-black;
         // border-bottom: 1px solid $color-black;
         width: 250px;
         height: 30px;
       }
+
       .submit {
         width: 120px;
-        // border: 1px solid stand.$color-black;
+        border: 1px solid stand.$color-bg;
         height: 30px;
         text-align: center;
       }

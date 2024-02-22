@@ -6,11 +6,23 @@ $font-size: 16px;
 $font-bold: 600;
 $font-light: 300;
 $line-height: 1.5;
-$color-off-white: #fdfbf9;
-$color-black: #0d0a06;
-$color-sand: #e9e5e1;
-$color-beige: #ece5db;
-$color-cafe-lette: #ceb68f;
+$color-bg: #272727;
+$color-black: #131313;
+$color-off-white: #fafafa;
+$color-orange: #e09b62;
+$color-green: #386354;
+$color-gradient-orange: linear-gradient(
+  90deg,
+  rgba(39, 39, 39, 0.9640231092436975) 3%,
+  rgba(224, 155, 98, 1) 50%,
+  rgba(39, 39, 39, 0.9752275910364145) 97%
+);
+$color-gradient-green: linear-gradient(
+  90deg,
+  rgba(39, 39, 39, 0.9640231092436975) 3%,
+  rgba(56, 99, 84, 1) 50%,
+  rgba(39, 39, 39, 0.9752275910364145) 97%
+);
 $border-radius: 8px;
 $main-padding: 5em;
 
@@ -51,33 +63,12 @@ $main-padding: 5em;
   grid-column-gap: 20px;
   grid-row-gap: 20px;
 }
-@mixin knap-activ($font-size, $padding-hoj, $padding-bred, $antal) {
-  background-color: $color-cafe-lette;
-  color: $color-off-white;
-  font-size: $font-size;
-  padding: $padding-hoj $padding-bred;
-  width: calc(100% / $antal);
-  text-align: center;
-}
 
-@mixin knap-passiv($font-size, $padding-hoj, $padding-bred, $antal) {
-  background-color: $color-beige;
-  color: $color-black;
-  font-size: $font-size;
-  padding: $padding-hoj $padding-bred;
-  width: calc(100% / $antal);
-  text-align: center;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+@mixin finger- h1, h2, h3, h4, h5, h6 {
   font-family: $font-family-secondary;
   font-weight: $font-bold;
   line-height: $line-height;
+  color: $color-off-white;
   margin: 0;
   padding: 0;
 }
@@ -86,6 +77,7 @@ a {
   font-family: $font-family-secondary;
   font-weight: $font-light;
   line-height: $line-height;
+  color: $color-off-white;
   margin: 0;
   padding: 0;
 }
@@ -94,7 +86,7 @@ a {
 
 header {
   position: fixed;
-  background-color: $color-beige;
+  background-color: $color-black;
   z-index: 10;
   width: 100%;
   nav {
@@ -114,7 +106,7 @@ header {
 
 .footer-main {
   padding: 3em $main-padding;
-  background-color: $color-beige;
+  background-color: $color-black;
   margin-top: 3em;
 
   .footer-con {
