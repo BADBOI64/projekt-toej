@@ -1,90 +1,5 @@
+@use "stand";
 @use "cssReset";
-
-@import url("https://use.typekit.net/yqg7pai.css");
-
-$font-family-primary: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-$font-family-secondary: "futura pt", sans-serif;
-$font-size: 16px;
-$font-bold: 600;
-$font-light: 300;
-$line-height: 1.5;
-$color-off-white: #fdfbf9;
-$color-black: #0d0a06;
-$color-sand: #e9e5e1;
-$color-beige: #ece5db;
-$color-cafe-lette: #ceb68f;
-$border-radius: 8px;
-$main-padding: 5em;
-
-.visually-hidden {
-  clip: rect(0 0 0 0);
-  clip-path: inset(50%);
-  height: 1px;
-  overflow: hidden;
-  position: absolute;
-  white-space: nowrap;
-  width: 1px;
-}
-
-@mixin background-image($url) {
-  background-image: url($url);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-}
-
-@mixin circle($bg-color) {
-  background-color: $bg-color;
-  border-radius: 50%;
-  aspect-ratio: 1 / 1;
-}
-
-@mixin display-flex($flex-direction, $justify-content, $align-items, $gap) {
-  display: flex;
-  flex-direction: $flex-direction;
-  justify-content: $justify-content;
-  align-items: $align-items;
-  gap: $gap;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: $font-family-secondary;
-  font-weight: $font-bold;
-  line-height: $line-height;
-  margin: 0;
-  padding: 0;
-}
-p,
-a {
-  font-family: $font-family-secondary;
-  font-weight: $font-light;
-  line-height: $line-height;
-  margin: 0;
-  padding: 0;
-}
-
-header {
-  position: fixed;
-  background-color: $color-beige;
-  z-index: 10;
-  width: 100%;
-  nav {
-    @include display-flex(row, space-between, center, 0.5rem);
-    img {
-      height: 40px;
-      width: auto;
-    }
-  }
-  img {
-    height: 40px;
-    width: auto;
-  }
-}
 
 .hero {
   height: 45svh;
@@ -96,13 +11,10 @@ header {
 }
 
 .offers {
-  padding: 7rem $main-padding;
+  padding: 7rem stand.$main-padding;
   .offer-grid {
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: 20svh 20svh;
-    grid-column-gap: 20px;
-    grid-row-gap: 20px;
+    @include stand.display-grid;
+    grid-template-rows: 43svh 40svh;
 
     .offer-box1 {
       grid-area: 1 / 4 / 2 / 10;
@@ -132,31 +44,31 @@ header {
 }
 
 .info {
-  padding: 1rem $main-padding;
+  padding: 1rem stand.$main-padding;
   text-align: center;
   h2 {
     font-size: 2rem;
     margin-bottom: 1em;
   }
   .info-con {
-    @include display-flex(row, space-around, center, 0);
+    @include stand.display-flex(row, space-around, center, 0);
 
     .info-box {
-      @include display-flex(column, center, center, 0);
+      @include stand.display-flex(column, center, center, 0);
 
       i {
-        @include circle(black);
+        @include stand.circle(black);
 
-        @include display-flex(row, center, center, 0);
+        @include stand.display-flex(row, center, center, 0);
         width: 80px;
-        color: $color-off-white;
+        color: stand.$color-off-white;
         font-size: 2rem;
       }
     }
   }
 }
 .cases {
-  padding: 7em $main-padding;
+  padding: 7em stand.$main-padding;
   h3 {
     font-size: 2rem;
     margin-bottom: 1em;
@@ -164,11 +76,8 @@ header {
   }
 
   .cases-container {
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
+    @include stand.display-grid;
     grid-template-rows: 20svh 20svh 20svh 20svh;
-    grid-column-gap: 20px;
-    grid-row-gap: 20px;
 
     .cb1 {
       grid-area: 1 / 4 / 2 / 10;
@@ -200,36 +109,36 @@ header {
     }
     .cb8 {
       grid-area: 4 / 7 / 5 / 13;
-      background-color: $color-cafe-lette;
+      background-color: stand.$color-cafe-lette;
     }
   }
 }
 
 .kontakt {
-  padding: 0 $main-padding;
+  padding: 0 stand.$main-padding;
   .kontakt-formular {
     height: 30svh;
 
-    background-color: $color-black;
-    @include display-flex(column, center, center, 0);
+    background-color: stand.$color-cafe-lette;
+    @include stand.display-flex(column, center, center, 0);
 
     h3 {
       font-size: 2rem;
-      color: $color-off-white;
+      color: stand.$color-off-white;
     }
 
     p {
       font-size: 1.2rem;
-      color: $color-off-white;
+      color: stand.$color-off-white;
     }
 
     .email-submit {
-      @include display-flex(row, space-around, center, 0);
-      background-color: $color-off-white;
+      @include stand.display-flex(row, space-around, center, 0);
+      background-color: stand.$color-off-white;
       margin-top: 0.5rem;
 
       .mail {
-        border: 1px solid $color-black;
+        // border: 1px solid stand.$color-black;
         // border-left: 1px solid $color-black;
         // border-top: 1px solid $color-black;
         // border-bottom: 1px solid $color-black;
@@ -238,48 +147,10 @@ header {
       }
       .submit {
         width: 120px;
-        border: 1px solid $color-black;
+        // border: 1px solid stand.$color-black;
         height: 30px;
         text-align: center;
       }
-    }
-  }
-}
-
-footer {
-  padding: 3em $main-padding;
-  background-color: $color-beige;
-  margin-top: 3em;
-
-  .footer-con {
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: 1fr;
-    grid-column-gap: 20px;
-    grid-row-gap: 20px;
-    padding-bottom: 1em;
-    .footer-box1 {
-      grid-area: 1 / 1 / 2 / 7;
-      img {
-        height: 40px;
-        width: auto;
-      }
-    }
-    .footer-box2 {
-      @include display-flex(column, flex-start, flex-start, 0);
-      grid-area: 1 / 7 / 2 / 9;
-    }
-    .footer-box3 {
-      @include display-flex(column, flex-start, flex-start, 0);
-      grid-area: 1 / 10 / 2 / 13;
-    }
-  }
-  .footer-buttombox {
-    @include display-flex(row, center, center, 15px);
-    padding: 1rem 0;
-    border-top: 2px solid $color-black;
-    i {
-      font-size: 1.2rem;
     }
   }
 }

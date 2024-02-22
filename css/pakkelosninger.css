@@ -201,7 +201,18 @@ meter {
 }
 
 .hero {
-  height: 45svh;
+  height: 50svh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 0;
+}
+.hero h1 {
+  position: absolute;
+  color: #fdfbf9;
+  text-align: center;
+  font-size: 6rem;
 }
 .hero video {
   width: 100%;
@@ -210,127 +221,52 @@ meter {
      object-fit: cover;
 }
 
-.offers {
-  padding: 7rem 5em;
-}
-.offers .offer-grid {
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  grid-column-gap: 20px;
-  grid-row-gap: 20px;
-  grid-template-rows: 43svh 40svh;
-}
-.offers .offer-grid .offer-box1 {
-  grid-area: 1/4/2/10;
-  background-color: red;
-}
-.offers .offer-grid .offer-box2 {
-  grid-area: 2/4/3/7;
-  -o-object-fit: cover;
-     object-fit: cover;
-  background-color: blue;
-}
-.offers .offer-grid .offer-box3 {
-  grid-area: 2/7/3/10;
-  -o-object-fit: cover;
-     object-fit: cover;
-  background-color: green;
-}
-.offers .offer-grid .offer-box4 {
-  grid-area: 1/1/3/4;
-  -o-object-fit: cover;
-     object-fit: cover;
-  background-color: yellow;
-}
-.offers .offer-grid .offer-box5 {
-  grid-area: 1/10/3/13;
-  -o-object-fit: cover;
-     object-fit: cover;
-  background-color: orange;
+.breadcrumbs {
+  margin: 3em;
 }
 
-.info {
-  padding: 1rem 5em;
-  text-align: center;
-}
-.info h2 {
-  font-size: 2rem;
-  margin-bottom: 1em;
-}
-.info .info-con {
+.pakkelos-tekst {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
   gap: 0;
 }
-.info .info-con .info-box {
+.pakkelos-tekst p {
+  max-width: 600px;
+}
+
+.pakkelos-selector {
+  padding: 4em 5em;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 0;
+  gap: 50px;
 }
-.info .info-con .info-box i {
-  background-color: black;
-  border-radius: 50%;
-  aspect-ratio: 1/1;
+.pakkelos-selector .pakkelos-knapper {
+  width: 100%;
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
-  gap: 0;
-  width: 80px;
+  gap: 3em;
+}
+.pakkelos-selector .pakke-active {
+  background-color: #ceb68f;
   color: #fdfbf9;
-  font-size: 2rem;
-}
-
-.cases {
-  padding: 7em 5em;
-}
-.cases h3 {
-  font-size: 2rem;
-  margin-bottom: 1em;
+  font-size: 1rem;
+  padding: 1rem 0;
+  width: 25%;
   text-align: center;
 }
-.cases .cases-container {
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  grid-column-gap: 20px;
-  grid-row-gap: 20px;
-  grid-template-rows: 20svh 20svh 20svh 20svh;
-}
-.cases .cases-container .cb1 {
-  grid-area: 1/4/2/10;
-  background-color: red;
-}
-.cases .cases-container .cb2 {
-  grid-area: 2/4/3/7;
-  background-color: blue;
-}
-.cases .cases-container .cb3 {
-  grid-area: 2/7/3/10;
-  background-color: green;
-}
-.cases .cases-container .cb4 {
-  grid-area: 1/1/3/4;
-  background-color: yellow;
-}
-.cases .cases-container .cb5 {
-  grid-area: 1/10/3/13;
-  background-color: orange;
-}
-.cases .cases-container .cb6 {
-  grid-area: 3/1/5/7;
-  background-color: pink;
-}
-.cases .cases-container .cb7 {
-  grid-area: 3/7/4/13;
-  background-color: purple;
-}
-.cases .cases-container .cb8 {
-  grid-area: 4/7/5/13;
-  background-color: #ceb68f;
+.pakkelos-selector .pakke-pasive {
+  background-color: #ece5db;
+  color: #0d0a06;
+  font-size: 1rem;
+  padding: 1rem 0;
+  width: 25%;
+  text-align: center;
 }
 
 .kontakt {
@@ -370,4 +306,4 @@ meter {
   width: 120px;
   height: 30px;
   text-align: center;
-}/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=pakkelosninger.css.map */

@@ -1,0 +1,85 @@
+@use "stand";
+@use "cssReset";
+
+.hero {
+  height: 50svh;
+  @include stand.display-flex(row, center, center, 0);
+  h1 {
+    position: absolute;
+    color: stand.$color-off-white;
+    text-align: center;
+    font-size: 6rem;
+  }
+  video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.breadcrumbs {
+  margin: 3em;
+}
+
+.pakkelos-tekst {
+  @include stand.display-flex(row, center, center, 0);
+  p {
+    max-width: 600px;
+  }
+}
+
+.pakkelos-selector {
+  padding: 4em stand.$main-padding;
+  @include stand.display-flex(column, center, center, 50px);
+  .pakkelos-knapper {
+    width: 100%;
+    @include stand.display-flex(row, space-around, center, 3em);
+  }
+  .pakke-active {
+    @include stand.knap-activ(1rem, 1rem, 0, 4);
+  }
+  .pakke-pasive {
+    @include stand.knap-passiv(1rem, 1rem, 0, 4);
+  }
+}
+
+.kontakt {
+  padding: 0 stand.$main-padding;
+  .kontakt-formular {
+    height: 30svh;
+
+    background-color: stand.$color-cafe-lette;
+    @include stand.display-flex(column, center, center, 0);
+
+    h3 {
+      font-size: 2rem;
+      color: stand.$color-off-white;
+    }
+
+    p {
+      font-size: 1.2rem;
+      color: stand.$color-off-white;
+    }
+
+    .email-submit {
+      @include stand.display-flex(row, space-around, center, 0);
+      background-color: stand.$color-off-white;
+      margin-top: 0.5rem;
+
+      .mail {
+        // border: 1px solid stand.$color-black;
+        // border-left: 1px solid $color-black;
+        // border-top: 1px solid $color-black;
+        // border-bottom: 1px solid $color-black;
+        width: 250px;
+        height: 30px;
+      }
+      .submit {
+        width: 120px;
+        // border: 1px solid stand.$color-black;
+        height: 30px;
+        text-align: center;
+      }
+    }
+  }
+}

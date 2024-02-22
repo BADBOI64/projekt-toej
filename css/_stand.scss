@@ -1,0 +1,148 @@
+@import url("https://use.typekit.net/yqg7pai.css");
+
+$font-family-primary: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+$font-family-secondary: "futura pt", sans-serif;
+$font-size: 16px;
+$font-bold: 600;
+$font-light: 300;
+$line-height: 1.5;
+$color-off-white: #fdfbf9;
+$color-black: #0d0a06;
+$color-sand: #e9e5e1;
+$color-beige: #ece5db;
+$color-cafe-lette: #ceb68f;
+$border-radius: 8px;
+$main-padding: 5em;
+
+.visually-hidden {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+@mixin background-image($url) {
+  background-image: url($url);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+@mixin circle($bg-color) {
+  background-color: $bg-color;
+  border-radius: 50%;
+  aspect-ratio: 1 / 1;
+}
+
+@mixin display-flex($flex-direction, $justify-content, $align-items, $gap) {
+  display: flex;
+  flex-direction: $flex-direction;
+  justify-content: $justify-content;
+  align-items: $align-items;
+  gap: $gap;
+}
+
+@mixin display-grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
+}
+@mixin knap-activ($font-size, $padding-hoj, $padding-bred, $antal) {
+  background-color: $color-cafe-lette;
+  color: $color-off-white;
+  font-size: $font-size;
+  padding: $padding-hoj $padding-bred;
+  width: calc(100% / $antal);
+  text-align: center;
+}
+
+@mixin knap-passiv($font-size, $padding-hoj, $padding-bred, $antal) {
+  background-color: $color-beige;
+  color: $color-black;
+  font-size: $font-size;
+  padding: $padding-hoj $padding-bred;
+  width: calc(100% / $antal);
+  text-align: center;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $font-family-secondary;
+  font-weight: $font-bold;
+  line-height: $line-height;
+  margin: 0;
+  padding: 0;
+}
+p,
+a {
+  font-family: $font-family-secondary;
+  font-weight: $font-light;
+  line-height: $line-height;
+  margin: 0;
+  padding: 0;
+}
+
+// HEADER
+
+header {
+  position: fixed;
+  background-color: $color-beige;
+  z-index: 10;
+  width: 100%;
+  nav {
+    @include display-flex(row, space-between, center, 0.5rem);
+    img {
+      height: 40px;
+      width: auto;
+    }
+  }
+  img {
+    height: 40px;
+    width: auto;
+  }
+}
+
+// FOOTER
+
+.footer-main {
+  padding: 3em $main-padding;
+  background-color: $color-beige;
+  margin-top: 3em;
+
+  .footer-con {
+    @include display-grid;
+
+    padding-bottom: 1em;
+    .footer-box1 {
+      grid-area: 1 / 1 / 2 / 7;
+      img {
+        height: 40px;
+        width: auto;
+      }
+    }
+    .footer-box2 {
+      @include display-flex(column, flex-start, flex-start, 0);
+      grid-area: 1 / 7 / 2 / 9;
+    }
+    .footer-box3 {
+      @include display-flex(column, flex-start, flex-start, 0);
+      grid-area: 1 / 10 / 2 / 13;
+    }
+  }
+  .footer-buttombox {
+    @include display-flex(row, center, center, 35px);
+    padding: 1.5rem 0;
+    border-top: 2px solid $color-black;
+    i {
+      font-size: 2rem;
+    }
+  }
+}
