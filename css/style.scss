@@ -1,15 +1,6 @@
 @use "stand";
 @use "cssReset";
 
-.hero {
-  height: 45svh;
-  video {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-}
-
 main {
   @include stand.display-grid;
   background-color: stand.$color-bg;
@@ -92,7 +83,7 @@ main {
 
   h3 {
     grid-area: 1 / 1 / 2 / 13;
-    font-size: 4.5rem;
+    font-size: 5rem;
     z-index: 10;
     display: flex;
     justify-content: center;
@@ -106,19 +97,14 @@ main {
   }
   .skills-con {
     grid-area: 2 / 1 / 3 / 13;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+    @include stand.display-flex(row, space-around, center, 0);
     text-align: center;
     font-size: 1.5rem;
 
     margin-top: 2em;
 
     .skills-box {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
+      @include stand.display-flex(column, center, center, 0);
 
       .skills-green-arrow {
         @include stand.finger-up(stand.$color-gradient-green-up, 2em);
@@ -137,11 +123,35 @@ main {
 
 .creative-solotion {
   grid-column: 1/13;
+  margin: 10em 0;
+  padding: 13em 0;
+  background: stand.$color-gradient-orange;
+  h4 {
+    font-size: 5rem;
+    text-align: center;
+  }
+  .creative-solotion-con {
+    margin-top: 2em;
+    @include stand.display-flex(row, center, center, 4em);
+    .creative-solotion-box {
+      text-align: center;
+      width: 25svw;
 
-  img {
-    width: 35%;
-    height: auto;
-    grid-column: 1/6;
+      border: 20px solid stand.$color-bg;
+
+      img {
+        width: 100%;
+        aspect-ratio: 1 / 1;
+        object-fit: cover;
+      }
+      p {
+        background-color: stand.$color-off-white;
+        color: stand.$color-black;
+        font-size: 1.5rem;
+        white-space: nowrap;
+        padding: 0.5em;
+      }
+    }
   }
 }
 
