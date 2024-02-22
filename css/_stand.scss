@@ -188,7 +188,6 @@ header {
 .footer-main {
   padding: 3em $main-padding;
   background-color: $color-black;
-  margin-top: 3em;
 
   .footer-con {
     @include display-grid;
