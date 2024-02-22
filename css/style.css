@@ -278,14 +278,23 @@ main {
   -webkit-border-radius: 0 250px 250px 0;
   -moz-border-radius: 0 250px 250px 0;
 }
-.cases img {
+.cases .cases-mask {
   grid-area: 1/7/5/12;
   z-index: 2;
-  -o-object-fit: cover;
-     object-fit: cover;
   margin-top: -3em;
+  background-position: top center;
+  -webkit-mask-repeat: no-repeat;
+          mask-repeat: no-repeat;
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 167 352'%3E%3Cpath d='M147 0h-11c-6 0-6 1-6 6s-5 8-10 8H47c-5 0-10-3-10-8s-1-6-6-6H20C7 0 0 7 0 20v312c0 12 6 20 20 20h127c14 0 20-8 20-20V20c0-13-7-20-20-20zm-35 349H55a1 1 0 110-3h57a1 1 0 010 3z'/%3E%3C/svg%3E");
+          mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 167 352'%3E%3Cpath d='M147 0h-11c-6 0-6 1-6 6s-5 8-10 8H47c-5 0-10-3-10-8s-1-6-6-6H20C7 0 0 7 0 20v312c0 12 6 20 20 20h127c14 0 20-8 20-20V20c0-13-7-20-20-20zm-35 349H55a1 1 0 110-3h57a1 1 0 010 3z'/%3E%3C/svg%3E");
+  -webkit-mask-position: center;
+          mask-position: center;
+}
+.cases .cases-mask img {
   height: 100%;
   width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .skills {
@@ -296,7 +305,7 @@ main {
   grid-row-gap: 20px;
   grid-template-rows: repeat(2, 1fr);
 }
-.skills h3 {
+.skills h2 {
   grid-area: 1/1/2/13;
   font-size: 5rem;
   z-index: 10;
@@ -355,7 +364,7 @@ main {
   padding: 13em 0;
   background: linear-gradient(to bottom, rgba(224, 155, 98, 0) 0%, rgba(224, 155, 98, 0.5) 25%, rgb(224, 155, 98) 50%, rgba(224, 155, 98, 0.5) 75%, rgba(224, 155, 98, 0) 100%);
 }
-.creative-solotion h4 {
+.creative-solotion h2 {
   font-size: 5rem;
   text-align: center;
 }
@@ -388,15 +397,116 @@ main {
 
 .vision {
   grid-column: 1/13;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
+  grid-template-rows: repeat(2, 1fr);
 }
-.vision img {
-  width: 35%;
+.vision h2 {
+  grid-area: 1/1/2/13;
+  font-size: 5rem;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-self: center;
+}
+.vision .vision-yellow-arrow {
+  grid-area: 1/5/2/12;
+  background: linear-gradient(to right, rgb(224, 155, 98) 1%, rgba(224, 155, 98, 0.75) 30%, rgba(224, 155, 98, 0) 100%);
+  z-index: 1;
+  height: 8em;
+  border-radius: 250px 0 0 250px;
+  -webkit-border-radius: 250px 0 0 250px;
+  -moz-border-radius: 250px 0 0 250px;
+  display: flex;
+  align-self: center;
+}
+.vision .vision-text {
+  grid-area: 2/2/3/7;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 2em;
+  font-size: 1.3rem;
+}
+.vision .vision-text p {
+  max-width: 500px;
+}
+.vision .vision-text a {
+  font-weight: 600;
+}
+.vision .vision-img {
+  grid-area: 2/7/3/12;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+}
+.vision .vision-img img {
+  width: 100%;
   height: auto;
-  grid-column: 1/6;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.vision .vision-img .vision-img-one {
+  grid-area: 1/2/3/4;
+}
+.vision .vision-img .vision-img-two {
+  grid-area: 2/1/4/3;
 }
 
 .who-we-are {
   grid-column: 1/13;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
+  grid-template-rows: repeat(2, 1fr);
+}
+.who-we-are h2 {
+  grid-area: 1/1/2/13;
+  font-size: 5rem;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-self: center;
+}
+.who-we-are .who-we-are-yellow-arrow {
+  grid-area: 1/1/2/7;
+  background: linear-gradient(to left, rgb(224, 155, 98) 1%, rgba(224, 155, 98, 0.75) 30%, rgba(224, 155, 98, 0) 100%);
+  z-index: 1;
+  height: 8em;
+  border-radius: 0 250px 250px 0;
+  -webkit-border-radius: 0 250px 250px 0;
+  -moz-border-radius: 0 250px 250px 0;
+  display: flex;
+  align-self: center;
+}
+.who-we-are .who-we-are-text {
+  grid-area: 2/7/3/12;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 2em;
+  font-size: 1.3rem;
+}
+.who-we-are .who-we-are-text p {
+  max-width: 500px;
+}
+.who-we-are .who-we-are-text a {
+  font-weight: 600;
+}
+.who-we-are .who-we-are-img {
+  grid-area: 2/2/3/7;
+  max-width: 700px;
+}
+.who-we-are .who-we-are-img img {
+  width: 100%;
+  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .adventure {

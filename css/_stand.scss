@@ -13,13 +13,13 @@ $color-orange: #e09b62;
 $color-green: #386354;
 
 // Orange Gradient
-$color-gradient-orange-right: linear-gradient(
+$color-gradient-orange-left: linear-gradient(
   to right,
   rgba(224, 155, 98, 1) 1%,
   rgba(224, 155, 98, 0.75) 30%,
   rgba(224, 155, 98, 0) 100%
 );
-$color-gradient-orange-left: linear-gradient(
+$color-gradient-orange-right: linear-gradient(
   to left,
   rgba(224, 155, 98, 1) 1%,
   rgba(224, 155, 98, 0.75) 30%,
@@ -42,14 +42,14 @@ $color-gradient-green: linear-gradient(
   rgba(56, 99, 84, 1) 50%,
   rgba(39, 39, 39, 0.9752275910364145) 97%
 );
-$color-gradient-green-right: linear-gradient(
+$color-gradient-green-left: linear-gradient(
   to right,
   rgba(56, 99, 84, 1) 1%,
   rgba(56, 99, 84, 0.75) 30%,
   rgba(56, 99, 84, 0) 100%
 );
 
-$color-gradient-green-left: linear-gradient(
+$color-gradient-green-right: linear-gradient(
   to left,
   rgba(56, 99, 84, 1) 1%,
   rgba(56, 99, 84, 0.75) 30%,
