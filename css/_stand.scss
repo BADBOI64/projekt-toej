@@ -1,6 +1,6 @@
 @import url("https://use.typekit.net/yqg7pai.css");
 
-$font-family-primary: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+$font-family-primary: poppins, sans-serif;
 $font-family-secondary: "futura pt", sans-serif;
 $font-size: 16px;
 $font-bold: 600;
@@ -11,12 +11,39 @@ $color-black: #131313;
 $color-off-white: #fafafa;
 $color-orange: #e09b62;
 $color-green: #386354;
-$color-gradient-orange: linear-gradient(
-  90deg,
-  rgba(39, 39, 39, 0.9640231092436975) 3%,
-  rgba(224, 155, 98, 1) 50%,
-  rgba(39, 39, 39, 0.9752275910364145) 97%
+$color-gradient-orange-right: linear-gradient(
+  to right,
+  rgba(224, 155, 98, 1) 1%,
+  rgba(224, 155, 98, 0.75) 40%,
+  rgba(224, 155, 98, 0) 100%
 );
+$color-gradient-orange-left: linear-gradient(
+  to left,
+  rgba(224, 155, 98, 1) 1%,
+  rgba(224, 155, 98, 0.75) 40%,
+  rgba(224, 155, 98, 0) 100%
+);
+$color-gradient-green-right: linear-gradient(
+  to right,
+  rgba(56, 99, 84, 1) 1%,
+  rgba(56, 99, 84, 0.75) 40%,
+  rgba(56, 99, 84, 0) 100%
+);
+
+$color-gradient-green-left: linear-gradient(
+  to left,
+  rgba(56, 99, 84, 1) 1%,
+  rgba(56, 99, 84, 0.75) 40%,
+  rgba(56, 99, 84, 0) 100%
+);
+
+$color-gradient-green-up: linear-gradient(
+  to bottom,
+  rgba(56, 99, 84, 1) 1%,
+  rgba(56, 99, 84, 0.75) 40%,
+  rgba(56, 99, 84, 0) 100%
+);
+
 $color-gradient-green: linear-gradient(
   90deg,
   rgba(39, 39, 39, 0.9640231092436975) 3%,
@@ -64,8 +91,40 @@ $main-padding: 5em;
   grid-row-gap: 20px;
 }
 
-@mixin finger- h1, h2, h3, h4, h5, h6 {
-  font-family: $font-family-secondary;
+@mixin finger-left($color-gradient: $color-gradient-orange-right, $height) {
+  background: $color-gradient;
+  z-index: 1;
+  height: $height;
+  border-radius: 250px 0 0 250px;
+  -webkit-border-radius: 250px 0 0 250px;
+  -moz-border-radius: 250px 0 0 250px;
+}
+
+@mixin finger-right($color-gradient: $color-gradient-orange-left, $height) {
+  background: $color-gradient;
+  z-index: 1;
+  height: $height;
+  border-radius: 0 250px 250px 0;
+  -webkit-border-radius: 0 250px 250px 0;
+  -moz-border-radius: 0 250px 250px 0;
+}
+
+@mixin finger-up($color-gradient: $color-gradient-green-up, $height) {
+  background: $color-gradient;
+  z-index: 1;
+  height: $height;
+  border-radius: 250px 250px 0 0;
+  -webkit-border-radius: 250px 250px 0 0;
+  -moz-border-radius: 250px 250px 0 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $font-family-primary;
   font-weight: $font-bold;
   line-height: $line-height;
   color: $color-off-white;
@@ -74,7 +133,7 @@ $main-padding: 5em;
 }
 p,
 a {
-  font-family: $font-family-secondary;
+  font-family: $font-family-primary;
   font-weight: $font-light;
   line-height: $line-height;
   color: $color-off-white;
@@ -121,18 +180,18 @@ header {
       }
     }
     .footer-box2 {
-      @include display-flex(column, flex-start, flex-start, 0);
+      @include display-flex(column, flex-start, flex-start, 0.5rem);
       grid-area: 1 / 7 / 2 / 9;
     }
     .footer-box3 {
-      @include display-flex(column, flex-start, flex-start, 0);
+      @include display-flex(column, flex-start, flex-start, 0.5rem);
       grid-area: 1 / 10 / 2 / 13;
     }
   }
   .footer-buttombox {
     @include display-flex(row, center, center, 35px);
     padding: 1.5rem 0;
-    border-top: 2px solid $color-black;
+    border-top: 2px solid $color-off-white;
     i {
       font-size: 2rem;
     }

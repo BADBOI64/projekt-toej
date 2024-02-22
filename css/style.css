@@ -17,7 +17,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "futura pt", sans-serif;
+  font-family: poppins, sans-serif;
   font-weight: 600;
   line-height: 1.5;
   color: #fafafa;
@@ -27,7 +27,7 @@ h6 {
 
 p,
 a {
-  font-family: "futura pt", sans-serif;
+  font-family: poppins, sans-serif;
   font-weight: 300;
   line-height: 1.5;
   color: #fafafa;
@@ -81,7 +81,7 @@ header img {
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
-  gap: 0;
+  gap: 0.5rem;
   grid-area: 1/7/2/9;
 }
 .footer-main .footer-con .footer-box3 {
@@ -89,7 +89,7 @@ header img {
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
-  gap: 0;
+  gap: 0.5rem;
   grid-area: 1/10/2/13;
 }
 .footer-main .footer-buttombox {
@@ -99,7 +99,7 @@ header img {
   align-items: center;
   gap: 35px;
   padding: 1.5rem 0;
-  border-top: 2px solid #131313;
+  border-top: 2px solid #fafafa;
 }
 .footer-main .footer-buttombox i {
   font-size: 2rem;
@@ -137,11 +137,10 @@ ol, ul, menu {
 }
 
 /* For images to not be able to exceed their container */
-img {
-  max-inline-size: 100%;
-  max-block-size: 100%;
-}
-
+/* img {
+    max-inline-size: 100%;
+    max-block-size: 100%;
+} */
 /* removes spacing between cells in tables */
 table {
   border-collapse: collapse;
@@ -240,7 +239,7 @@ main {
 }
 .welcome p {
   font-size: 1.2rem;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: poppins, sans-serif;
 }
 
 .cases {
@@ -253,15 +252,108 @@ main {
   grid-template-rows: repeat(4, 1fr);
 }
 .cases h2 {
-  grid-area: 1/4/2/8;
-  font-size: 2rem;
+  font-size: 6rem;
+  grid-area: 1/3/2/6;
+  z-index: 10;
+  display: flex;
+  align-items: center;
 }
 .cases p {
-  grid-area: 2/4/3/8;
+  font-size: 2.2rem;
+  grid-area: 2/3/3/6;
+  white-space: nowrap;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+}
+.cases .cases-yellow-arrow {
+  grid-area: 1/3/2/8;
+  background: linear-gradient(to right, rgb(224, 155, 98) 1%, rgba(224, 155, 98, 0.75) 40%, rgba(224, 155, 98, 0) 100%);
+  z-index: 1;
+  height: 100%;
+  border-radius: 250px 0 0 250px;
+  -webkit-border-radius: 250px 0 0 250px;
+  -moz-border-radius: 250px 0 0 250px;
+  position: relative;
+  right: 30px;
+}
+.cases .cases-green-arrow {
+  grid-area: 2/1/3/6;
+  display: flex;
+  align-self: center;
+  background: linear-gradient(to left, rgb(56, 99, 84) 1%, rgba(56, 99, 84, 0.75) 40%, rgba(56, 99, 84, 0) 100%);
+  z-index: 1;
+  height: 5em;
+  border-radius: 0 250px 250px 0;
+  -webkit-border-radius: 0 250px 250px 0;
+  -moz-border-radius: 0 250px 250px 0;
+}
+.cases img {
+  grid-area: 1/7/5/12;
+  z-index: 2;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin-top: -3em;
+  height: 100%;
+  width: 100%;
 }
 
 .skills {
   grid-column: 1/13;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
+  grid-template-rows: repeat(2, 1fr);
+}
+.skills h3 {
+  grid-area: 1/1/2/13;
+  font-size: 4.5rem;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-self: center;
+}
+.skills .skills-yellow-arrow {
+  grid-area: 1/1/2/7;
+  background: linear-gradient(to left, rgb(224, 155, 98) 1%, rgba(224, 155, 98, 0.75) 40%, rgba(224, 155, 98, 0) 100%);
+  z-index: 1;
+  height: 8em;
+  border-radius: 0 250px 250px 0;
+  -webkit-border-radius: 0 250px 250px 0;
+  -moz-border-radius: 0 250px 250px 0;
+  display: flex;
+  align-self: center;
+}
+.skills .skills-con {
+  grid-area: 2/1/3/13;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+  font-size: 1.5rem;
+  margin-top: 2em;
+}
+.skills .skills-con .skills-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.skills .skills-con .skills-box .skills-green-arrow {
+  background: linear-gradient(to bottom, rgb(56, 99, 84) 1%, rgba(56, 99, 84, 0.75) 40%, rgba(56, 99, 84, 0) 100%);
+  z-index: 1;
+  height: 2em;
+  border-radius: 250px 250px 0 0;
+  -webkit-border-radius: 250px 250px 0 0;
+  -moz-border-radius: 250px 250px 0 0;
+  height: 7em;
+  width: 7em;
+}
+.skills .skills-con .skills-box .skills-green-arrow i {
+  font-size: 4rem;
+  color: #fafafa;
+  margin-top: 0.5em;
 }
 
 .creative-solotion {
@@ -292,6 +384,7 @@ main {
 
 .contact {
   padding: 0 5em;
+  grid-column: 1/13;
 }
 .contact .contact-form {
   height: 30svh;
@@ -309,6 +402,7 @@ main {
 .contact .contact-form p {
   font-size: 1.2rem;
   color: #fafafa;
+  text-align: center;
 }
 .contact .contact-form .email-submit {
   display: flex;
@@ -316,17 +410,29 @@ main {
   justify-content: space-around;
   align-items: center;
   gap: 0;
-  background-color: #386354;
+  background-color: #fafafa;
   margin-top: 0.5rem;
+  font-family: poppins, sans-serif;
 }
 .contact .contact-form .email-submit .mail {
-  border: 1px solid #272727;
+  border: 0px solid #131313;
   width: 250px;
-  height: 30px;
+  height: 40px;
+  padding-left: 0.5rem;
+}
+.contact .contact-form .email-submit .mail::-moz-placeholder {
+  color: #131313;
+  opacity: 0.5;
+}
+.contact .contact-form .email-submit .mail::placeholder {
+  color: #131313;
+  opacity: 0.5;
 }
 .contact .contact-form .email-submit .submit {
   width: 120px;
-  border: 1px solid #272727;
-  height: 30px;
+  border: 0px solid #131313;
+  height: 40px;
   text-align: center;
+  background-color: #386354;
+  color: #fafafa;
 }/*# sourceMappingURL=style.css.map */
