@@ -135,7 +135,7 @@ $main-padding: 5em;
 @mixin finger-up($color-gradient: $color-gradient-green-up, $height) {
   background: $color-gradient;
   z-index: 1;
-  height: $height;
+  width: $height;
   border-radius: 250px 250px 0 0;
   -webkit-border-radius: 250px 250px 0 0;
   -moz-border-radius: 250px 250px 0 0;
