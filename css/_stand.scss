@@ -1,8 +1,15 @@
+// LAVET AF EMIL
+
 @import url("https://use.typekit.net/yqg7pai.css");
 
 $font-family-primary: poppins, sans-serif;
 $font-family-secondary: "futura pt", sans-serif;
 $font-size: 16px;
+$font-size-p: calc($font-size * 1.2);
+$font-size-p-big: calc($font-size * 1.5);
+$font-size-small-heading: calc($font-size * 2.5);
+$font-size-medium-heading: calc($font-size * 4);
+$font-size-large-heading: calc($font-size * 6);
 $font-bold: 600;
 $font-light: 300;
 $line-height: 1.5;
@@ -36,12 +43,6 @@ $color-gradient-orange: linear-gradient(
 );
 
 // GREEN Gradient
-$color-gradient-green: linear-gradient(
-  90deg,
-  rgba(95, 62, 62, 0.964) 3%,
-  rgba(56, 99, 84, 1) 50%,
-  rgba(39, 39, 39, 0.9752275910364145) 97%
-);
 $color-gradient-green-left: linear-gradient(
   to right,
   rgba(56, 99, 84, 1) 1%,
@@ -181,6 +182,14 @@ header {
     height: 40px;
     width: auto;
   }
+}
+main {
+  @include display-grid;
+  background-color: $color-bg;
+  background-image: url(../img/mainTingTing.svg);
+  background-size: str-length($string: "") + 100%;
+  background-position-y: 30%;
+  background-repeat: no-repeat;
 }
 
 // FOOTER

@@ -46,9 +46,9 @@ table {
 
 
 /* revert the 'white-space' property for textarea elements on Safari */
-textarea {
+/* textarea {
     white-space: revert;
-}
+} */
 
 /* minimum style to allow to style meter element */
 meter {
