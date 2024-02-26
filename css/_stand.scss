@@ -167,12 +167,13 @@ a {
 // HEADER
 
 header {
+  @include display-grid;
   position: fixed;
   background-color: $color-black;
-  z-index: 10;
+  z-index: 11;
   width: 100%;
   nav {
-    @include display-flex(row, space-between, center, 0.5rem);
+    padding: 0.5em;
     img {
       height: 40px;
       width: auto;

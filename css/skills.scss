@@ -177,6 +177,7 @@
 }
 .thi-skill-img-con {
   grid-column: 2/7;
+  grid-row: span 2;
   display: grid;
   grid-template-columns: 2fr 1fr 1fr;
   grid-template-rows: 2fr 1fr 1fr;

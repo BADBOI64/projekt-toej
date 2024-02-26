@@ -36,17 +36,17 @@ a {
 }
 
 header {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
   position: fixed;
   background-color: #131313;
-  z-index: 10;
+  z-index: 11;
   width: 100%;
 }
 header nav {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  gap: 0.5rem;
+  padding: 0.5em;
 }
 header nav img {
   height: 40px;
@@ -423,6 +423,7 @@ meter {
 
 .thi-skill-img-con {
   grid-column: 2/7;
+  grid-row: span 2;
   display: grid;
   grid-template-columns: 2fr 1fr 1fr;
   grid-template-rows: 2fr 1fr 1fr;
