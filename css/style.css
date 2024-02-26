@@ -46,6 +46,7 @@ header {
   width: 100%;
 }
 header nav {
+  grid-column: 1/13;
   padding: 0.5em;
 }
 header nav img {

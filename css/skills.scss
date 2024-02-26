@@ -231,8 +231,8 @@
 .fou-skill-img-con {
   grid-column: 7/12;
   display: grid;
-  grid-template-columns: 1fr 1fr 2fr;
-  grid-template-rows: 2fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
   .fou-skill-img-one {
     grid-area: 1 / 2 / 3 / 4;
   }
