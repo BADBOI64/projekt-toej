@@ -1,0 +1,507 @@
+@charset "UTF-8";
+@import url("https://use.typekit.net/yqg7pai.css");
+.visually-hidden {
+  clip: rect(0 0 0 0);
+  -webkit-clip-path: inset(50%);
+          clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: poppins, sans-serif;
+  font-weight: 600;
+  line-height: 1.5;
+  color: #fafafa;
+  margin: 0;
+  padding: 0;
+}
+
+p,
+a {
+  font-family: poppins, sans-serif;
+  font-weight: 300;
+  line-height: 1.5;
+  color: #fafafa;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
+  position: fixed;
+  background-color: #131313;
+  z-index: 11;
+  width: 100%;
+}
+header nav {
+  grid-column: 1/13;
+  padding: 0.5em;
+}
+header nav img {
+  height: 40px;
+  width: auto;
+}
+header img {
+  height: 40px;
+  width: auto;
+}
+
+main {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
+  background-color: #272727;
+  background-image: url(../img/mainTingTing.svg);
+  background-size: 100%;
+  background-position-y: 30%;
+  background-repeat: no-repeat;
+}
+
+.footer-main {
+  padding: 3em 5em;
+  background-color: #131313;
+}
+.footer-main .footer-con {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
+  padding-bottom: 1em;
+}
+.footer-main .footer-con .footer-box1 {
+  grid-area: 1/1/2/7;
+}
+.footer-main .footer-con .footer-box1 img {
+  height: 40px;
+  width: auto;
+}
+.footer-main .footer-con .footer-box2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 0.5rem;
+  grid-area: 1/7/2/9;
+}
+.footer-main .footer-con .footer-box3 {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 0.5rem;
+  grid-area: 1/10/2/13;
+}
+.footer-main .footer-buttombox {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 35px;
+  padding: 1.5rem 0;
+  border-top: 2px solid #fafafa;
+}
+.footer-main .footer-buttombox i {
+  font-size: 2rem;
+}
+
+/***
+    The new CSS reset - version 1.8.5 (last updated 14.6.2023)
+    GitHub page: https://github.com/elad2412/the-new-css-reset
+***/
+/*
+    Remove all the styles of the "User-Agent-Stylesheet", except for the 'display' property
+    - The "symbol *" part is to solve Firefox SVG sprite bug
+    - The "html" attribute is exclud, because otherwise a bug in Chrome breaks the CSS hyphens property (https://github.com/elad2412/the-new-css-reset/issues/36)
+ */
+*:where(:not(html, iframe, canvas, img, svg, video, audio):not(svg *, symbol *)) {
+  all: unset;
+  display: revert;
+}
+
+/* Preferred box-sizing value */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Reapply the pointer cursor for anchor tags */
+a, button {
+  cursor: revert;
+}
+
+/* Remove list styles (bullets/numbers) */
+ol, ul, menu {
+  list-style: none;
+}
+
+/* For images to not be able to exceed their container */
+/* img {
+    max-inline-size: 100%;
+    max-block-size: 100%;
+} */
+/* removes spacing between cells in tables */
+table {
+  border-collapse: collapse;
+}
+
+/* revert the 'white-space' property for textarea elements on Safari */
+/* textarea {
+    white-space: revert;
+} */
+/* minimum style to allow to style meter element */
+meter {
+  -webkit-appearance: revert;
+  -moz-appearance: revert;
+       appearance: revert;
+}
+
+/* preformatted text - use only for this feature */
+:where(pre) {
+  all: revert;
+}
+
+/* reset default text opacity of input placeholder */
+::-moz-placeholder {
+  color: unset;
+}
+::placeholder {
+  color: unset;
+}
+
+/* remove default dot (•) sign */
+::marker {
+  content: initial;
+}
+
+/* fix the feature of 'hidden' attribute.
+   display:revert; revert to element instead of attribute */
+:where([hidden]) {
+  display: none;
+}
+
+/* revert for bug in Chromium browsers
+   - fix for the content editable attribute will work properly.
+   - webkit-user-select: auto; added for Safari in case of using user-select:none on wrapper element */
+:where([contenteditable]:not([contenteditable=false])) {
+  -moz-user-modify: read-write;
+  -webkit-user-modify: read-write;
+  overflow-wrap: break-word;
+}
+
+/* apply back the draggable feature - exist only in Chromium and Safari */
+:where([draggable=true]) {
+  -webkit-user-drag: element;
+}
+
+/* Revert Modal native behavior */
+:where(dialog:modal) {
+  all: revert;
+}
+
+.hero {
+  height: 45svh;
+}
+.hero video {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.headline {
+  margin: 7em 0;
+  grid-column: 1/13;
+  text-align: center;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
+}
+.headline .headline-yellow-arrow {
+  grid-area: 1/1/2/9;
+  background: linear-gradient(to left, rgb(224, 155, 98) 1%, rgba(224, 155, 98, 0.75) 30%, rgba(224, 155, 98, 0) 100%);
+  z-index: 1;
+  height: 8em;
+  border-radius: 0 250px 250px 0;
+  -webkit-border-radius: 0 250px 250px 0;
+  -moz-border-radius: 0 250px 250px 0;
+  z-index: 1;
+}
+.headline .headline-green-arrow {
+  grid-area: 2/4/3/13;
+  background: linear-gradient(to right, rgb(56, 99, 84) 1%, rgba(56, 99, 84, 0.75) 30%, rgba(56, 99, 84, 0) 100%);
+  z-index: 1;
+  height: 8em;
+  border-radius: 250px 0 0 250px;
+  -webkit-border-radius: 250px 0 0 250px;
+  -moz-border-radius: 250px 0 0 250px;
+  z-index: 1;
+}
+.headline h1 {
+  grid-area: 1/1/2/9;
+}
+.headline h2 {
+  grid-area: 2/4/3/13;
+}
+.headline h1, .headline h2 {
+  font-size: 96px;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0;
+}
+.headline .headline-text-box {
+  grid-area: 3/3/4/11;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0;
+}
+.headline .headline-text-box p {
+  font-size: 19.2px;
+  max-width: 800px;
+}
+
+.fir-creative {
+  grid-column: 7/12;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 2fr;
+}
+.fir-creative .fir-creative-text-box {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+.fir-creative .fir-creative-text-box p {
+  font-size: 19.2px;
+}
+.fir-creative .fir-creative-yellow-arrow {
+  grid-area: 1/1/2/2;
+  background: linear-gradient(to right, rgb(224, 155, 98) 1%, rgba(224, 155, 98, 0.75) 30%, rgba(224, 155, 98, 0) 100%);
+  z-index: 1;
+  height: 8em;
+  border-radius: 250px 0 0 250px;
+  -webkit-border-radius: 250px 0 0 250px;
+  -moz-border-radius: 250px 0 0 250px;
+  display: flex;
+  align-self: flex-start;
+  justify-content: center;
+  z-index: 1;
+  margin-bottom: 0em;
+}
+.fir-creative .fir-creative-yellow-arrow h2 {
+  font-size: 40px;
+  z-index: 10;
+  display: flex;
+  align-self: center;
+  font-weight: 300;
+}
+
+.sec-team {
+  grid-area: 2/2/3/12;
+  background: linear-gradient(to bottom, rgba(224, 155, 98, 0) 0%, rgba(224, 155, 98, 0.5) 25%, rgb(224, 155, 98) 50%, rgba(224, 155, 98, 0.5) 75%, rgba(224, 155, 98, 0) 100%);
+  margin: 0em 0;
+  padding: 6em 0;
+  grid-column: 1/13;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
+  width: 100%;
+}
+.sec-team h3 {
+  grid-column: 1/13;
+  text-align: center;
+  padding-bottom: 1em;
+  font-size: 40px;
+  font-weight: 300;
+}
+.sec-team .grid-container {
+  grid-area: 8/2/6/12;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+}
+.sec-team img {
+  width: 80%;
+  height: 100%;
+  border-radius: 50px;
+  padding: 40px;
+}
+
+.process {
+  grid-area: 3/2/5/7;
+  background: linear-gradient(to left, rgb(56, 99, 84) 1%, rgba(56, 99, 84, 0.75) 30%, rgba(56, 99, 84, 0) 100%);
+  z-index: 1;
+  height: 6em;
+  border-radius: 0 250px 250px 0;
+  -webkit-border-radius: 0 250px 250px 0;
+  -moz-border-radius: 0 250px 250px 0;
+  display: flex;
+  align-self: flex-start;
+  justify-content: center;
+  z-index: 1;
+  margin-bottom: 3em;
+}
+.process h2 {
+  font-size: 40px;
+  z-index: 10;
+  display: flex;
+  align-self: center;
+  font-weight: 300;
+}
+
+.process-box {
+  grid-area: 4/2/5/7;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+.process-box p {
+  font-size: 19.2px;
+}
+
+.process-img-one {
+  grid-area: 3/8/5/12;
+}
+.process-img-one img {
+  width: 60%;
+  height: 60%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.process-img-two {
+  grid-area: 5/6/5/12;
+}
+.process-img-two img {
+  width: 40%;
+  height: 40%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.adventure {
+  grid-column: 1/13;
+  margin: 12em 0;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
+  grid-template-rows: 1fr;
+}
+.adventure .adventure-yellow-arrow {
+  grid-area: 1/3/2/11;
+  background: linear-gradient(to left, rgb(224, 155, 98) 1%, rgba(224, 155, 98, 0.75) 30%, rgba(224, 155, 98, 0) 100%);
+  z-index: 1;
+  height: 100%;
+  border-radius: 0 250px 250px 0;
+  -webkit-border-radius: 0 250px 250px 0;
+  -moz-border-radius: 0 250px 250px 0;
+  display: flex;
+  align-self: center;
+  z-index: 1;
+}
+.adventure .adventure-text {
+  padding: 2em 0;
+  grid-area: 1/1/2/13;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 2em;
+  font-size: 19.2px;
+  z-index: 3;
+}
+.adventure .adventure-text h3 {
+  font-size: 40px;
+  font-weight: 300;
+}
+.adventure .adventure-text p {
+  max-width: 500px;
+  text-align: center;
+}
+.adventure .adventure-text a {
+  font-size: 40px;
+  font-weight: 600;
+}
+
+.contact {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
+  padding: 6em 0;
+  background-color: #272727;
+}
+.contact .contact-form {
+  grid-column: 2/12;
+  height: 30svh;
+  background-image: url(../img/tingTing.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0;
+}
+.contact .contact-form h3 {
+  font-size: 40px;
+  color: #fafafa;
+}
+.contact .contact-form p {
+  font-size: 19.2px;
+  color: #fafafa;
+  text-align: center;
+}
+.contact .contact-form .email-submit {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  gap: 0;
+  background-color: #fafafa;
+  margin-top: 0.5rem;
+  font-family: poppins, sans-serif;
+}
+.contact .contact-form .email-submit .mail {
+  border: 0px solid #131313;
+  width: 250px;
+  height: 40px;
+  padding-left: 0.5rem;
+}
+.contact .contact-form .email-submit .mail::-moz-placeholder {
+  color: #131313;
+  opacity: 0.5;
+}
+.contact .contact-form .email-submit .mail::placeholder {
+  color: #131313;
+  opacity: 0.5;
+}
+.contact .contact-form .email-submit .submit {
+  width: 120px;
+  border: 0px solid #131313;
+  height: 40px;
+  text-align: center;
+  background-color: #386354;
+  color: #fafafa;
+}/*# sourceMappingURL=meet_team.css.map */
