@@ -63,11 +63,6 @@
   a {
     grid-column: span 2;
   }
-  a {
-  }
-
-  label[for="name"] {
-  }
 }
 .contact-us-form-img {
   grid-area: 2 / 8 / 3 / 12;
@@ -76,6 +71,62 @@
     height: 100%;
     object-fit: cover;
   }
+}
+
+.contact-us-form {
+  width: 100%;
+
+  label {
+    padding: 1em;
+    background-color: #fff;
+    color: #272727;
+    margin: 0px 10px 10px 0px;
+    border-radius: 5px;
+    width: 90%;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="message"],
+  textarea {
+    padding: 1em;
+    background-color: #fff;
+    color: #272727;
+    margin: 0px 10px 10px 0px;
+    border-radius: 2px;
+    width: 20em;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  input[type="message"] {
+    width: 100%;
+  }
+}
+
+input[submit] {
+  cursor: pointer;
+  color: #272727;
+}
+
+.section-form1 {
+  display: flex;
+
+  label {
+    width: 30vh;
+  }
+}
+
+.visually-hidden {
+  /*WCAG defineret class som fjerner element fra skærm, men som stadig kan læses af skærmlæseren*/
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
 }
 
 .adventure {
