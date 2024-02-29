@@ -72,7 +72,12 @@
     object-fit: cover;
   }
 }
-
+.contact-us-bg {
+  grid-column: 1/13;
+  margin: 7em 0;
+  padding: 13em 0;
+  background: stand.$color-gradient-orange;
+}
 .contact-us-form {
   width: 100%;
 

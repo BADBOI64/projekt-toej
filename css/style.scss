@@ -132,10 +132,12 @@
     margin-top: 2em;
     @include stand.display-flex(row, center, center, 4em);
     .creative-solotion-box {
+      width: 20svw;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
       text-align: center;
-      width: 25svw;
-
-      border: 20px solid stand.$color-bg;
 
       img {
         width: 100%;
@@ -145,9 +147,9 @@
       p {
         background-color: stand.$color-off-white;
         color: stand.$color-black;
-        font-size: stand.$font-size-p-big;
-        white-space: nowrap;
+        font-size: stand.$font-size-p;
         padding: 0.5em;
+        width: 100%;
       }
     }
   }
