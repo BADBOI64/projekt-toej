@@ -114,10 +114,19 @@
   height: auto;
 }
 
-.process-green-arrow {
-  grid-column: 1/13;
-  @include stand.finger-right(stand.$color-gradient-green-right, 6em);
+.process{
+  grid-column: 2/7;
   display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 2fr;
+
+    .pro
+}
+
+.process-green-arrow {
+  grid-area: 1/1/2/2;
+  @include stand.finger-right(stand.$color-gradient-green-right, 6em);
+  display: flex;
   align-self: flex-start;
   justify-content: center;
   z-index: 1;

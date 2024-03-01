@@ -54,15 +54,18 @@
     }
   }
 }
-.contact-us-form {
-  grid-area: 2 / 2 / 3 / 7;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  h3,
-  p,
-  a {
-    grid-column: span 2;
-  }
+
+
+.contact-us-bg {
+  grid-column: 1/13;
+  margin: 7em 0;
+  padding: 13em 0;
+  background: stand.$color-gradient-orange;
+}
+.contact-us-con {
+  @include stand.display-flex(row-reverse, center, center, 2em);
+  padding: 0 4em;
+  
 }
 .contact-us-form-img {
   grid-area: 2 / 8 / 3 / 12;
@@ -72,14 +75,16 @@
     object-fit: cover;
   }
 }
-.contact-us-bg {
-  grid-column: 1/13;
-  margin: 7em 0;
-  padding: 13em 0;
-  background: stand.$color-gradient-orange;
-}
 .contact-us-form {
   width: 100%;
+  grid-area: 2 / 2 / 3 / 7;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  h3,
+  p,
+  a {
+    grid-column: span 2;
+  }
 
   label {
     padding: 1em;
@@ -204,9 +209,6 @@ input[submit] {
 
       .mail {
         border: 0px solid stand.$color-black;
-        // border-left: 1px solid $color-black;
-        // border-top: 1px solid $color-black;
-        // border-bottom: 1px solid $color-black;
         width: 250px;
         height: 40px;
         padding-left: 0.5rem;

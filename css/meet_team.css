@@ -431,15 +431,22 @@ meter {
   height: auto;
 }
 
+.process {
+  grid-column: 2/7;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 2fr;
+}
+
 .process-green-arrow {
-  grid-column: 1/13;
+  grid-area: 1/1/2/2;
   background: linear-gradient(to left, rgb(56, 99, 84) 1%, rgba(56, 99, 84, 0.75) 30%, rgba(56, 99, 84, 0) 100%);
   z-index: 1;
   height: 6em;
   border-radius: 0 250px 250px 0;
   -webkit-border-radius: 0 250px 250px 0;
   -moz-border-radius: 0 250px 250px 0;
-  display: grid;
+  display: flex;
   align-self: flex-start;
   justify-content: center;
   z-index: 1;
