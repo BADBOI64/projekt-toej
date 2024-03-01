@@ -430,6 +430,10 @@ meter {
   height: auto;
 }
 
+.mail1:hover {
+  color: #386354;
+}
+
 .process {
   grid-column: 2/7;
   display: grid;
@@ -442,6 +446,7 @@ meter {
 }
 .process .process-text-box p {
   font-size: calc(var(--font-size) * 1.2);
+  margin-bottom: 2em;
 }
 .process .process-green-arrow {
   grid-area: 1/1/2/8;

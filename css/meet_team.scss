@@ -113,6 +113,11 @@
   height: auto;
 }
 
+
+.mail1:hover{
+  color: #386354;
+}
+
 .process{
   grid-column: 2/7;
   display: grid;
@@ -125,6 +130,7 @@
       
       p{
         font-size: stand.$font-size-p;
+        margin-bottom: 2em;
       }
     }
 
