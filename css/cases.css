@@ -127,10 +127,9 @@ main {
   background-color: #131313;
 }
 .footer-main .footer-con {
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  grid-column-gap: 20px;
-  grid-row-gap: 20px;
+  margin: 0 0 4em;
+  gap: 2em;
+  overflow-wrap: break-word;
 }
 .footer-main .footer-con .footer-box1 {
   grid-area: 1/1/2/7;
@@ -168,9 +167,27 @@ main {
   font-size: 2rem;
 }
 
+@media only screen and (min-width: 1080px) {
+  :root {
+    --font-size: 14px;
+  }
+  .footer-con {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+    width: 100%;
+  }
+}
 @media only screen and (max-width: 1300px) {
   :root {
     --font-size: 14px;
+  }
+  .footer-con {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
   }
 }
 @media only screen and (max-width: 1024px) {
@@ -181,6 +198,10 @@ main {
 @media only screen and (max-width: 768px) {
   :root {
     --font-size: 10px;
+  }
+  .footer-con {
+    display: flex;
+    flex-wrap: wrap;
   }
   .fa-bars-staggered {
     display: flex !important;
@@ -198,6 +219,9 @@ main {
 @media only screen and (max-width: 480px) {
   :root {
     --font-size: 8px;
+  }
+  .footer-con {
+    overflow-wrap: break-word;
   }
 }
 @media only screen and (max-width: 320px) {
@@ -333,7 +357,6 @@ meter {
 .headline h1 {
   grid-area: 1/1/2/13;
   font-size: 5rem;
-  font-family: "futura pt", sans-serif;
   z-index: 10;
   display: flex;
   flex-direction: column;

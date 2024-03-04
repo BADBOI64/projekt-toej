@@ -1,4 +1,3 @@
-// LAVET AF EMIL
 
 @use "stand";
 @use "cssReset";
@@ -28,7 +27,6 @@
   h1 {
     grid-area: 1 / 1 / 2 / 13;
     font-size: 5rem;
-    font-family: stand.$font-family-secondary;
     z-index: 10;
     @include stand.display-flex(column, center, center, 0);
   }
@@ -236,7 +234,6 @@
   }
 }
 
-// LAVET AF EMIL og TOBIAS
 .contact {
   @include stand.display-grid;
 

@@ -257,7 +257,9 @@ main {
   background-color: $color-black;
 
   .footer-con {
-    @include display-grid;
+    margin: 0 0 4em;
+    gap: 2em;
+    overflow-wrap: break-word;
 
     .footer-box1 {
       grid-area: 1 / 1 / 2 / 7;
@@ -285,20 +287,45 @@ main {
   }
 }
 
+@media only screen and (min-width: 1080px) {
+  :root {
+    --font-size: 14px;
+  }
+  .footer-con {
+    @include display-grid;
+    width: 100%;
+    
+  }
+
+  
+
+}
+
+
 @media only screen and (max-width: 1300px) {
   :root {
     --font-size: 14px;
   }
+  .footer-con {
+    @include display-grid;
+  }
+
 }
 
 @media only screen and (max-width: 1024px) {
   :root {
     --font-size: 12px;
   }
+
 }
 @media only screen and (max-width: 768px) {
   :root {
     --font-size: 10px;
+  }
+
+  .footer-con {
+    display: flex;
+    flex-wrap: wrap;
   }
 
   .fa-bars-staggered {
@@ -321,6 +348,10 @@ main {
   :root {
     --font-size: 8px;
   }
+  .footer-con {
+    overflow-wrap: break-word;
+  }
+
 }
 
 @media only screen and (max-width: 320px) {

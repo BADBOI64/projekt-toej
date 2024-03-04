@@ -1,4 +1,3 @@
-// LAVET AF EMIL
 
 @use "stand";
 @use "cssReset";
@@ -282,7 +281,7 @@
   }
 }
 
-// LAVET AF EMIL og TOBIAS
+
 .contact {
   @include stand.display-grid;
 
@@ -338,3 +337,185 @@
     }
   }
 }
+
+
+
+
+@media only screen and (max-width: 480px) {
+
+.headline {
+
+    .headline-yellow-arrow {
+      grid-area: 1 / 2 / 2 / 13;
+    }
+
+    h1 {
+      grid-area: 1 / 1 / 2 / 13;
+      font-size: stand.$font-size-medium-heading;
+    }
+
+    .headline-text-box {
+      grid-area: 2 / 3 / 3 / 11;
+
+      p {
+        font-size: stand.$font-size-p-big;
+      }
+    }
+  }
+
+
+.fir-skill-green-arrow {
+  grid-area: 2 / 2 / 3 / 11;
+}
+.fir-skill-text-box {
+  grid-area: 4 / 4 / 5 / 10;
+}
+.fir-skill-img-con-one {
+  grid-area: 3 / 4 / 4 / 10;
+}
+.fir-skill-img-con-two {
+  display: none;
+}
+.gap {
+  grid-column: 1/13;
+  height: 3em;
+}
+
+.sec-skill-green-arrow {
+  height: 350px;
+  margin-bottom: 3em;
+}
+
+.sec-skill-head {
+  grid-area: 10 / 2 / 11 / 9;
+  z-index: 3;
+  font-size: stand.$font-size-large-heading;
+  display: flex;
+  align-items: center;
+  justify-self: flex-end;
+  margin-right: 95px;
+
+  span {
+    color: stand.$color-orange;
+  }
+}
+
+.sec-skill-img-one {
+  grid-area: 12 / 2 / 14 / 8;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.sec-skill-img-two {
+  grid-area: 14 / 2 / 16 / 8;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.sec-skill-text-box {
+  grid-area: 13 / 8 / 15 / 13;
+
+  p {
+    padding-bottom: 30px;
+  }
+}
+
+.thi-skill {
+  grid-area: 17 / 7 / 19 / 12;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 2fr;
+
+  .thi-skill-text-box {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+
+    p {
+      font-size: stand.$font-size-p;
+    }
+  }
+
+  .thi-skill-yellow-arrow {
+    grid-area: 1 / 1 / 2 / 2;
+    @include stand.finger-left(stand.$color-gradient-orange-left, 6em);
+    display: flex;
+    align-self: flex-start;
+    justify-content: center;
+    z-index: 1;
+    margin-bottom: 3em;
+
+  }
+}
+
+.thi-skill-img-con {
+  grid-column: 2/7;
+  grid-row: span 4;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  grid-template-rows: 2fr 1fr 1fr;
+
+  .thi-skill-img-one {
+    grid-area: 3 / 1 / 3 / 3;
+  }
+
+  .thi-skill-img-two {
+    grid-area: 4 / 2 / 4 / 4;
+  }
+
+}
+
+.fou-skill {
+  grid-column: 2/8;
+  .fou-skill-text-box {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+
+    p {
+      font-size: stand.$font-size-p;
+    }
+  }
+
+  .fou-skill-green-arrow {
+    grid-area: 1 / 1 / 2 / 2;
+  }
+}
+
+.fou-skill-img-con {
+  grid-column: 8/12;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+
+  .fou-skill-img-one {
+    grid-area: 2 / 2 / 3 / 4;
+  }
+
+  .fou-skill-img-two {
+    grid-area: 3 / 2 / 3 / 4;
+  }
+
+  P{
+    grid-area: 1 / 2 / 5 / 4;
+  }
+}
+
+
+
+
+
+}
+
+
+
+
+

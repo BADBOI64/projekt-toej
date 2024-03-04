@@ -73,7 +73,6 @@
   grid-column: 4 / span 3; 
   grid-row: 1; 
   width: 60%;
-  height: 100px;
   align-items: center;
   
 }
@@ -107,10 +106,18 @@
   width: 60%;
   align-items: center;
   padding-top: 2em;
+
+}
+
+.gallery-item-five img {
+  object-position: 50% 5%;
+}
+.gallery-item-two img {
+  object-position: 10% 0%;
 }
 .gallery-team img {
   width: 100%;
-  height: auto;
+  height: 11em;
 }
 
 
@@ -167,9 +174,9 @@
 }
 
 .process-img-two{
-  grid-area: 2/4/4/6;
-  width: 10em;
-  height: 10em;
+  grid-area: 2/3/4/6;
+  width: 15em;
+  height: 15em;
 }
 
 img {
@@ -216,7 +223,6 @@ img {
   }
 }
 
-// LAVET AF EMIL og TOBIAS
 .contact {
   @include stand.display-grid;
 
@@ -251,9 +257,6 @@ img {
 
       .mail {
         border: 0px solid stand.$color-black;
-        // border-left: 1px solid $color-black;
-        // border-top: 1px solid $color-black;
-        // border-bottom: 1px solid $color-black;
         width: 250px;
         height: 40px;
         padding-left: 0.5rem;
@@ -274,4 +277,61 @@ img {
       }
     }
   }
+}
+
+
+
+@media only screen and (max-width: 480px) {
+
+
+  .headline{
+    
+      h1, h2{ font-size: stand.$font-size-medium-heading;
+    }
+  }
+  .the-team {
+      margin-bottom: 4em;
+      margin-top: -2em;
+    }
+  
+    .gallery-team {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      grid-template-columns: 1fr;
+      padding: 20px;
+    }
+  
+    .gallery-item-two {
+      margin-bottom: 10em;
+    }
+  
+  .process {
+    grid-column: 2/12;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 2fr;
+
+  }
+  .process-img {
+    grid-column: 2/12;
+  }
+
+  .process-img-one {
+    display: none;
+  }
+
+  .process-img-two {
+    grid-area: 1 / 1 / 4 / 6;
+    width: 100%;
+    height: auto;
+    margin-top: -7em;
+  }
+
+
+
+
+
+
+
 }
