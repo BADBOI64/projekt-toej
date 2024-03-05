@@ -172,11 +172,13 @@ main {
     --font-size: 14px;
   }
   .footer-con {
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    grid-column-gap: 20px;
-    grid-row-gap: 20px;
-    width: 100%;
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+  }
+  .footer-con .footer-box1 {
+    inline-size: 500px;
   }
 }
 @media only screen and (max-width: 1300px) {
@@ -184,10 +186,10 @@ main {
     --font-size: 14px;
   }
   .footer-con {
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    grid-column-gap: 20px;
-    grid-row-gap: 20px;
+    display: flex;
+  }
+  .footer-con .footer-box1 {
+    inline-size: 500px;
   }
 }
 @media only screen and (max-width: 1024px) {
@@ -730,6 +732,7 @@ meter {
   color: #fafafa;
 }
 
+/* Tablet/Ipad  */
 @media only screen and (max-width: 768px) {
   .creative-solotion h2 {
     font-size: calc(var(--font-size) * 4);

@@ -292,10 +292,16 @@ main {
     --font-size: 14px;
   }
   .footer-con {
-    @include display-grid;
-    width: 100%;
+    display: flex;
+    margin: auto;
     
+    justify-content: center;
+    align-items: center;
+      .footer-box1 {
+        inline-size: 500px;
+      }
   }
+
 
   
 
@@ -307,7 +313,10 @@ main {
     --font-size: 14px;
   }
   .footer-con {
-    @include display-grid;
+    display: flex;
+    .footer-box1 {
+      inline-size: 500px;
+    }
   }
 
 }
