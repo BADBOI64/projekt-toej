@@ -296,7 +296,7 @@
 
     h1 {
       grid-area: 1 / 1 / 2 / 13;
-      font-size: stand.$font-size-medium-heading;
+      font-size: stand.$font-size-large-heading;
     }
 
     .headline-text-box {
@@ -311,9 +311,16 @@
 
 .fir-skill-green-arrow {
   grid-area: 2 / 2 / 3 / 11;
+  h2{
+    font-size: stand.$font-size-medium-heading;
+  }
+
 }
 .fir-skill-text-box {
   grid-area: 4 / 4 / 5 / 10;
+    P {
+        font-size: stand.$font-size-p-big;
+      }
 }
 .fir-skill-img-con-one {
   grid-area: 3 / 4 / 4 / 10;
@@ -331,6 +338,8 @@
   margin-bottom: 3em;
 }
 
+
+
 .sec-skill-head {
   grid-area: 10 / 2 / 11 / 9;
   z-index: 3;
@@ -343,6 +352,8 @@
   span {
     color: stand.$color-orange;
   }
+
+  
 }
 
 .sec-skill-img-one {
@@ -378,6 +389,7 @@
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr 2fr;
+  margin-top: 6em;
 
   .thi-skill-text-box {
     display: flex;
@@ -385,7 +397,7 @@
     gap: 40px;
 
     p {
-      font-size: stand.$font-size-p;
+      font-size: stand.$font-size-p-big;
     }
   }
 
@@ -397,8 +409,11 @@
     justify-content: center;
     z-index: 1;
     margin-bottom: 3em;
-
+      h2 {
+          font-size: stand.$font-size-medium-heading;
+        }
   }
+  
 }
 
 .thi-skill-img-con {
@@ -420,18 +435,22 @@
 
 .fou-skill {
   grid-column: 2/8;
+  margin-top: 6em;
   .fou-skill-text-box {
     display: flex;
     flex-direction: column;
     gap: 40px;
 
     p {
-      font-size: stand.$font-size-p;
+      font-size: stand.$font-size-p-big;
     }
   }
 
   .fou-skill-green-arrow {
     grid-area: 1 / 1 / 2 / 2;
+      h2 {
+          font-size: stand.$font-size-medium-heading;
+        }
   }
 }
 
@@ -446,7 +465,7 @@
   }
 
   .fou-skill-img-two {
-    grid-area: 3 / 2 / 3 / 4;
+    display: none;
   }
 
   P{

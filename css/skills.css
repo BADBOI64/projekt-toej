@@ -98,6 +98,7 @@ header .header-mobile.active {
 }
 header .header-mobile.active a {
   padding: 0.3em 1em;
+  font-size: 20px;
 }
 
 main {
@@ -254,10 +255,16 @@ main {
   :root {
     --font-size: 12px;
   }
+  .hero {
+    height: 40svh;
+  }
 }
 @media only screen and (max-width: 768px) {
   :root {
     --font-size: 10px;
+  }
+  .hero {
+    height: 35svh;
   }
   .footer-con {
     display: flex;
@@ -295,6 +302,9 @@ main {
     flex-wrap: wrap;
     flex-direction: row;
     gap: 20px;
+  }
+  .hero {
+    height: 30svh;
   }
 }
 @media only screen and (max-width: 320px) {
@@ -733,7 +743,7 @@ meter {
   }
   .headline h1 {
     grid-area: 1/1/2/13;
-    font-size: calc(var(--font-size) * 4);
+    font-size: calc(var(--font-size) * 6);
   }
   .headline .headline-text-box {
     grid-area: 2/3/3/11;
@@ -744,8 +754,14 @@ meter {
   .fir-skill-green-arrow {
     grid-area: 2/2/3/11;
   }
+  .fir-skill-green-arrow h2 {
+    font-size: calc(var(--font-size) * 4);
+  }
   .fir-skill-text-box {
     grid-area: 4/4/5/10;
+  }
+  .fir-skill-text-box P {
+    font-size: calc(var(--font-size) * 1.5);
   }
   .fir-skill-img-con-one {
     grid-area: 3/4/4/10;
@@ -802,6 +818,7 @@ meter {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 2fr;
+    margin-top: 6em;
   }
   .thi-skill .thi-skill-text-box {
     display: flex;
@@ -809,7 +826,7 @@ meter {
     gap: 40px;
   }
   .thi-skill .thi-skill-text-box p {
-    font-size: calc(var(--font-size) * 1.2);
+    font-size: calc(var(--font-size) * 1.5);
   }
   .thi-skill .thi-skill-yellow-arrow {
     grid-area: 1/1/2/2;
@@ -824,6 +841,9 @@ meter {
     justify-content: center;
     z-index: 1;
     margin-bottom: 3em;
+  }
+  .thi-skill .thi-skill-yellow-arrow h2 {
+    font-size: calc(var(--font-size) * 4);
   }
   .thi-skill-img-con {
     grid-column: 2/7;
@@ -840,6 +860,7 @@ meter {
   }
   .fou-skill {
     grid-column: 2/8;
+    margin-top: 6em;
   }
   .fou-skill .fou-skill-text-box {
     display: flex;
@@ -847,10 +868,13 @@ meter {
     gap: 40px;
   }
   .fou-skill .fou-skill-text-box p {
-    font-size: calc(var(--font-size) * 1.2);
+    font-size: calc(var(--font-size) * 1.5);
   }
   .fou-skill .fou-skill-green-arrow {
     grid-area: 1/1/2/2;
+  }
+  .fou-skill .fou-skill-green-arrow h2 {
+    font-size: calc(var(--font-size) * 4);
   }
   .fou-skill-img-con {
     grid-column: 8/12;
@@ -862,7 +886,7 @@ meter {
     grid-area: 2/2/3/4;
   }
   .fou-skill-img-con .fou-skill-img-two {
-    grid-area: 3/2/3/4;
+    display: none;
   }
   .fou-skill-img-con P {
     grid-area: 1/2/5/4;

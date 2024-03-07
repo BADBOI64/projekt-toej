@@ -98,6 +98,7 @@ header .header-mobile.active {
 }
 header .header-mobile.active a {
   padding: 0.3em 1em;
+  font-size: 20px;
 }
 
 main {
@@ -254,10 +255,16 @@ main {
   :root {
     --font-size: 12px;
   }
+  .hero {
+    height: 40svh;
+  }
 }
 @media only screen and (max-width: 768px) {
   :root {
     --font-size: 10px;
+  }
+  .hero {
+    height: 35svh;
   }
   .footer-con {
     display: flex;
@@ -295,6 +302,9 @@ main {
     flex-wrap: wrap;
     flex-direction: row;
     gap: 20px;
+  }
+  .hero {
+    height: 30svh;
   }
 }
 @media only screen and (max-width: 320px) {
