@@ -732,6 +732,12 @@ meter {
   color: #fafafa;
 }
 
+/* 1080px+ */
+@media only screen and (min-width: 1080px) {
+  .creative-solotion-con, .vision, .who-we-are {
+    margin: 0 auto;
+  }
+}
 /* Tablet/Ipad  */
 @media only screen and (max-width: 768px) {
   .creative-solotion h2 {

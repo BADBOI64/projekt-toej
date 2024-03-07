@@ -344,7 +344,12 @@
     }
   }
 }
-
+/* 1080px+ */
+@media only screen and (min-width: 1080px) {
+  .creative-solotion-con, .vision, .who-we-are {
+    margin: 0 auto;
+  }
+}
 
 /* Tablet/Ipad  */
 
