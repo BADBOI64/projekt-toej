@@ -252,6 +252,67 @@ main {
 }
 
 // FOOTER
+
+/* Nyhedsbrev */
+
+
+.contact {
+  @include display-grid;
+
+  padding: 6em 0;
+  background-color: $color-bg;
+
+  .contact-form {
+    grid-column: 2/12;
+    height: 30svh;
+    background-image: url(../img/tingTing.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    @include display-flex(column, center, center, 0);
+
+    h3 {
+      font-size: $font-size-small-heading;
+      color: $color-off-white;
+    }
+
+    p {
+      font-size: $font-size-p;
+      color: $color-off-white;
+      text-align: center;
+    }
+
+    .email-submit {
+      margin-top: 0.5rem;
+      font-family: $font-family-primary;
+
+      .mail {
+        border: 0px solid $color-black;
+        width: 250px;
+        height: 40px;
+        padding-left: 0.5rem;
+        background-color: $color-off-white;
+      }
+
+      .mail::placeholder {
+        color: $color-black;
+        opacity: 0.5;
+      }
+
+      .submit {
+        width: 120px;
+        border: 0px solid $color-black;
+        height: 40px;
+        text-align: center;
+        background-color: $color-green;
+        color: $color-off-white;
+      }
+    }
+  }
+}
+
+
+
 .footer-main {
   padding: 3em $main-padding;
   background-color: $color-black;
@@ -351,6 +412,11 @@ main {
   .header-about {
     display: none;
   }
+
+  .email-submit {
+    @include display-flex(row, space-around, center, 0);
+  }
+
 }
 
 @media only screen and (max-width: 480px) {
@@ -359,6 +425,12 @@ main {
   }
   .footer-con {
     overflow-wrap: break-word;
+  }
+  .email-submit {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 20px;
   }
 
 }

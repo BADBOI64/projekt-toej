@@ -289,61 +289,7 @@
   }
 }
 
-.contact {
-  @include stand.display-grid;
 
-  padding: 6em 0;
-  background-color: stand.$color-bg;
-
-  .contact-form {
-    grid-column: 2/12;
-    height: 30svh;
-    background-image: url(../img/tingTing.svg);
-    background-repeat: no-repeat;
-    background-size: cover;
-
-    @include stand.display-flex(column, center, center, 0);
-
-    h3 {
-      font-size: stand.$font-size-small-heading;
-      color: stand.$color-off-white;
-    }
-
-    p {
-      font-size: stand.$font-size-p;
-      color: stand.$color-off-white;
-      text-align: center;
-    }
-
-    .email-submit {
-      @include stand.display-flex(row, space-around, center, 0);
-      background-color: stand.$color-off-white;
-      margin-top: 0.5rem;
-      font-family: stand.$font-family-primary;
-
-      .mail {
-        border: 0px solid stand.$color-black;
-        width: 250px;
-        height: 40px;
-        padding-left: 0.5rem;
-      }
-
-      .mail::placeholder {
-        color: stand.$color-black;
-        opacity: 0.5;
-      }
-
-      .submit {
-        width: 120px;
-        border: 0px solid stand.$color-black;
-        height: 40px;
-        text-align: center;
-        background-color: stand.$color-green;
-        color: stand.$color-off-white;
-      }
-    }
-  }
-}
 /* 1080px+ */
 @media only screen and (min-width: 1080px) {
   .creative-solotion-con, .vision, .who-we-are {
@@ -369,6 +315,7 @@
   }
 }
 }
+
 }
 
 
@@ -513,6 +460,9 @@
     max-width: 700px;
   }
 }
+
+
+
   
 }
 
