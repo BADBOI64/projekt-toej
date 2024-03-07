@@ -230,6 +230,10 @@ main {
   :root {
     --font-size: 14px;
   }
+  .contact-form {
+    width: 1080px;
+    margin: auto;
+  }
   .footer-con {
     display: flex;
     margin: auto;
@@ -238,6 +242,10 @@ main {
   }
   .footer-con .footer-box1 {
     inline-size: 500px;
+  }
+  .footer-buttombox {
+    max-width: 1080px;
+    margin: auto;
   }
 }
 @media only screen and (max-width: 1300px) {
@@ -653,4 +661,11 @@ meter {
 .adventure .adventure-text a {
   font-size: calc(var(--font-size) * 2.5);
   font-weight: 600;
+}
+
+@media only screen and (min-width: 1080px) {
+  .contact-us-con {
+    width: 1080px;
+    margin: auto;
+  }
 }/*# sourceMappingURL=contact_us.css.map */

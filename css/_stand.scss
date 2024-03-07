@@ -353,6 +353,10 @@ main {
   :root {
     --font-size: 14px;
   }
+  .contact-form {
+    width: 1080px;
+    margin: auto;
+  }
   .footer-con {
     display: flex;
     margin: auto;
@@ -363,7 +367,10 @@ main {
         inline-size: 500px;
       }
   }
-
+  .footer-buttombox {
+    max-width: 1080px;
+    margin: auto;
+  }
 
   
 

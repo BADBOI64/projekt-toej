@@ -230,6 +230,10 @@ main {
   :root {
     --font-size: 14px;
   }
+  .contact-form {
+    width: 1080px;
+    margin: auto;
+  }
   .footer-con {
     display: flex;
     margin: auto;
@@ -238,6 +242,10 @@ main {
   }
   .footer-con .footer-box1 {
     inline-size: 500px;
+  }
+  .footer-buttombox {
+    max-width: 1080px;
+    margin: auto;
   }
 }
 @media only screen and (max-width: 1300px) {
@@ -753,8 +761,13 @@ meter {
 
 /* 1080px+ */
 @media only screen and (min-width: 1080px) {
-  .creative-solotion-con, .vision, .who-we-are {
-    margin: 0 auto;
+  .creative-solotion-con, .vision, .who-we-are, .skills {
+    margin: auto;
+    width: 1080px;
+  }
+  .adventure {
+    margin: 12em auto;
+    width: 1080px;
   }
 }
 /* Tablet/Ipad  */

@@ -224,4 +224,9 @@ input[type="submit"]:hover {
   }
 }
 
-
+@media only screen and (min-width: 1080px) {
+  .contact-us-con {
+    width: 1080px;
+    margin: auto;
+  }
+}
