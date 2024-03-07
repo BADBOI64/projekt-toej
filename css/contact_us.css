@@ -39,6 +39,13 @@ a {
   padding: 0;
 }
 
+a:hover {
+  color: #e09b62;
+  border-bottom: 1px solid #e09b62;
+  width: -moz-max-content;
+  width: max-content;
+}
+
 header {
   width: 100svw;
   z-index: 11;
@@ -66,6 +73,9 @@ header nav a {
   font-weight: 600;
   align-items: center;
   display: flex;
+}
+header nav a:hover {
+  border: none;
 }
 header nav .header-contact {
   grid-column: 10/11;
@@ -455,9 +465,10 @@ meter {
   z-index: 1;
 }
 .headline h1 {
-  grid-area: 1/1/2/13;
-  font-size: calc(var(--font-size) * 6);
+  grid-area: 1/3/2/13;
+  font-size: calc(var(--font-size) * 4);
   font-family: "futura pt", sans-serif;
+  margin-left: -15%;
 }
 .headline h2 {
   grid-area: 2/1/3/13;
@@ -659,13 +670,65 @@ meter {
   text-align: center;
 }
 .adventure .adventure-text a {
-  font-size: calc(var(--font-size) * 2.5);
+  font-size: calc(var(--font-size) * 1.5);
   font-weight: 600;
+}
+.adventure .adventure-text a:hover {
+  color: #e09b62;
+  border-bottom: 1px solid #e09b62;
 }
 
 @media only screen and (min-width: 1080px) {
-  .contact-us-con {
+  .headline {
+    width: 1080px;
+    margin: 7em auto;
+  }
+  .contact-us-con, .adventure {
     width: 1080px;
     margin: auto;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  :root {
+    --font-size: 12px;
+  }
+  .headline h1 {
+    margin-left: -20%;
+  }
+}
+@media only screen and (max-width: 768px) {
+  :root {
+    --font-size: 10px;
+  }
+  .headline h1 {
+    margin-left: -5%;
+  }
+  .headline h2 {
+    margin-right: 10%;
+  }
+  .contact-us-con {
+    margin: auto;
+    padding: 0;
+  }
+  .contact-us-con p {
+    inline-size: 400px;
+  }
+  .contact-us-con .contact-us-form-img {
+    display: none;
+  }
+}
+/* Normal mobil */
+@media only screen and (max-width: 480px) {
+  :root {
+    --font-size: 8px;
+  }
+  .headline h1 {
+    margin-left: 10%;
+  }
+  .headline h2 {
+    margin-right: 20%;
+  }
+  .adventure {
+    margin: 4em 0;
   }
 }/*# sourceMappingURL=contact_us.css.map */

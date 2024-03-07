@@ -39,6 +39,13 @@ a {
   padding: 0;
 }
 
+a:hover {
+  color: #e09b62;
+  border-bottom: 1px solid #e09b62;
+  width: -moz-max-content;
+  width: max-content;
+}
+
 header {
   width: 100svw;
   z-index: 11;
@@ -66,6 +73,9 @@ header nav a {
   font-weight: 600;
   align-items: center;
   display: flex;
+}
+header nav a:hover {
+  border: none;
 }
 header nav .header-contact {
   grid-column: 10/11;
@@ -584,7 +594,7 @@ meter {
   grid-column: 2/7;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 1fr 2fr;
+  grid-template-rows: 1fr 5fr;
 }
 .fou-skill .fou-skill-text-box {
   display: flex;
@@ -676,7 +686,7 @@ meter {
   text-align: center;
 }
 .adventure .adventure-text a {
-  font-size: calc(var(--font-size) * 2.5);
+  font-size: calc(var(--font-size) * 1.5);
   font-weight: 600;
 }
 
@@ -727,10 +737,22 @@ meter {
     grid-column: 3/11;
     font-size: calc(var(--font-size) * 1.2);
   }
+  .fou-skill {
+    grid-column: 2/12;
+    grid-template-columns: auto;
+    grid-template-rows: 0.5fr 1fr;
+  }
+  .fou-skill-img-con {
+    grid-column: 2/12;
+    display: grid;
+  }
   .fou-skill-img-con .fou-skill-img-one {
     display: none;
   }
   .fou-skill-img-con .fou-skill-img-two {
-    grid-area: 2/1/4/6;
+    grid-area: 1/1/4/11;
+  }
+  .adventure {
+    margin: 4em 0;
   }
 }/*# sourceMappingURL=creative_solo.css.map */

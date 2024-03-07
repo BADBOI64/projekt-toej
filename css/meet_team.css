@@ -39,6 +39,13 @@ a {
   padding: 0;
 }
 
+a:hover {
+  color: #e09b62;
+  border-bottom: 1px solid #e09b62;
+  width: -moz-max-content;
+  width: max-content;
+}
+
 header {
   width: 100svw;
   z-index: 11;
@@ -66,6 +73,9 @@ header nav a {
   font-weight: 600;
   align-items: center;
   display: flex;
+}
+header nav a:hover {
+  border: none;
 }
 header nav .header-contact {
   grid-column: 10/11;
@@ -661,8 +671,12 @@ img {
   text-align: center;
 }
 .adventure .adventure-text a {
-  font-size: calc(var(--font-size) * 2.5);
+  font-size: calc(var(--font-size) * 1.5);
   font-weight: 600;
+}
+.adventure .adventure-text a:hover {
+  color: #386354;
+  border-bottom: #386354 solid 1px;
 }
 
 @media only screen and (max-width: 480px) {
@@ -700,5 +714,8 @@ img {
     width: 100%;
     height: auto;
     margin-top: -7em;
+  }
+  .adventure {
+    margin: 4em 0;
   }
 }/*# sourceMappingURL=meet_team.css.map */

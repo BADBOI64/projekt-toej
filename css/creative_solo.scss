@@ -152,7 +152,7 @@
   grid-column: 2/7;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 1fr 2fr;
+  grid-template-rows: 1fr 5fr;
 
   .fou-skill-text-box {
     display: flex;
@@ -229,7 +229,7 @@
       text-align: center;
     }
     a {
-      font-size: stand.$font-size-small-heading;
+      font-size: stand.$font-size-p-big;
       font-weight: stand.$font-bold;
     }
   }
@@ -296,16 +296,27 @@
   }
 }
 
+
+.fou-skill {
+    grid-column: 2/12;
+    grid-template-columns: auto;
+    grid-template-rows: 0.5fr 1fr;
+    }
 .fou-skill-img-con {
+  grid-column: 2/12;
+    display: grid;
   .fou-skill-img-one {
     display: none;
   }
 
   .fou-skill-img-two {
-    grid-area: 2 / 1 / 4 / 6;
+    grid-area: 1/1/4/11;
   }
 }
 
+.adventure {
+  margin: 4em 0;
+}
 
 
 }

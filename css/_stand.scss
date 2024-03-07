@@ -166,6 +166,11 @@ a {
   margin: 0;
   padding: 0;
 }
+a:hover {
+  color: $color-orange;
+  border-bottom: 1px solid $color-orange;
+  width: max-content;
+}
 
 // HEADER
 
@@ -195,6 +200,9 @@ header {
       font-weight: $font-bold;
       align-items: center;
       display: flex;
+    }
+    a:hover {
+      border: none;
     }
     .header-contact {
       grid-column: 10 / 11;
@@ -452,6 +460,7 @@ main {
     .hero {
       height: 30svh;
     }
+
 
 }
 

@@ -217,8 +217,12 @@ img {
       text-align: center;
     }
     a {
-      font-size: stand.$font-size-small-heading;
+      font-size: stand.$font-size-p-big;
       font-weight: stand.$font-bold;
+    }
+    a:hover {
+      color: stand.$color-green;
+      border-bottom: stand.$color-green solid 1px;
     }
   }
 }
@@ -272,6 +276,10 @@ img {
     width: 100%;
     height: auto;
     margin-top: -7em;
+  }
+
+  .adventure {
+    margin: 4em 0;
   }
 
 }

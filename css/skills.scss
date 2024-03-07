@@ -275,8 +275,12 @@
       text-align: center;
     }
     a {
-      font-size: stand.$font-size-small-heading;
+      font-size: stand.$font-size-p-big;
       font-weight: stand.$font-bold;
+    }
+    a:hover {
+      color: stand.$color-green;
+      border-bottom: 1px solid stand.$color-green;
     }
   }
 }
@@ -287,7 +291,9 @@
 
 
 @media only screen and (max-width: 480px) {
-
+  :root {
+    --font-size: 8px;
+  }
 .headline {
 
     .headline-yellow-arrow {
@@ -296,7 +302,7 @@
 
     h1 {
       grid-area: 1 / 1 / 2 / 13;
-      font-size: stand.$font-size-large-heading;
+      font-size: stand.$font-size-medium-heading;
     }
 
     .headline-text-box {
@@ -357,17 +363,11 @@
 }
 
 .sec-skill-img-one {
-  grid-area: 12 / 2 / 14 / 8;
-
-  img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
+  display: none;
 }
 
 .sec-skill-img-two {
-  grid-area: 14 / 2 / 16 / 8;
+  grid-area: 15 / 2 / 16 / 11;
 
   img {
     width: 100%;
@@ -377,7 +377,7 @@
 }
 
 .sec-skill-text-box {
-  grid-area: 13 / 8 / 15 / 13;
+  grid-area: 13/2/15/11;
 
   p {
     padding-bottom: 30px;
@@ -385,7 +385,7 @@
 }
 
 .thi-skill {
-  grid-area: 17 / 7 / 19 / 12;
+  grid-area: 17 / 2 / 19 / 12;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr 2fr;
@@ -417,24 +417,21 @@
 }
 
 .thi-skill-img-con {
-  grid-column: 2/7;
+  grid-column: 2/11;
   grid-row: span 4;
   display: grid;
-  grid-template-columns: 2fr 1fr 1fr;
-  grid-template-rows: 2fr 1fr 1fr;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
 
   .thi-skill-img-one {
-    grid-area: 3 / 1 / 3 / 3;
+    display: none;
   }
 
-  .thi-skill-img-two {
-    grid-area: 4 / 2 / 4 / 4;
-  }
 
 }
 
 .fou-skill {
-  grid-column: 2/8;
+  grid-column: 2/11;
   margin-top: 6em;
   .fou-skill-text-box {
     display: flex;
@@ -473,6 +470,9 @@
   }
 }
 
+.adventure {
+  margin: 4em 0;
+}
 
 
 

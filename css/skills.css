@@ -39,6 +39,13 @@ a {
   padding: 0;
 }
 
+a:hover {
+  color: #e09b62;
+  border-bottom: 1px solid #e09b62;
+  width: -moz-max-content;
+  width: max-content;
+}
+
 header {
   width: 100svw;
   z-index: 11;
@@ -66,6 +73,9 @@ header nav a {
   font-weight: 600;
   align-items: center;
   display: flex;
+}
+header nav a:hover {
+  border: none;
 }
 header nav .header-contact {
   grid-column: 10/11;
@@ -741,17 +751,24 @@ meter {
   text-align: center;
 }
 .adventure .adventure-text a {
-  font-size: calc(var(--font-size) * 2.5);
+  font-size: calc(var(--font-size) * 1.5);
   font-weight: 600;
+}
+.adventure .adventure-text a:hover {
+  color: #386354;
+  border-bottom: 1px solid #386354;
 }
 
 @media only screen and (max-width: 480px) {
+  :root {
+    --font-size: 8px;
+  }
   .headline .headline-yellow-arrow {
     grid-area: 1/2/2/13;
   }
   .headline h1 {
     grid-area: 1/1/2/13;
-    font-size: calc(var(--font-size) * 6);
+    font-size: calc(var(--font-size) * 4);
   }
   .headline .headline-text-box {
     grid-area: 2/3/3/11;
@@ -798,16 +815,10 @@ meter {
     color: #e09b62;
   }
   .sec-skill-img-one {
-    grid-area: 12/2/14/8;
-  }
-  .sec-skill-img-one img {
-    width: 100%;
-    height: 100%;
-    -o-object-fit: cover;
-       object-fit: cover;
+    display: none;
   }
   .sec-skill-img-two {
-    grid-area: 14/2/16/8;
+    grid-area: 15/2/16/11;
   }
   .sec-skill-img-two img {
     width: 100%;
@@ -816,13 +827,13 @@ meter {
        object-fit: cover;
   }
   .sec-skill-text-box {
-    grid-area: 13/8/15/13;
+    grid-area: 13/2/15/11;
   }
   .sec-skill-text-box p {
     padding-bottom: 30px;
   }
   .thi-skill {
-    grid-area: 17/7/19/12;
+    grid-area: 17/2/19/12;
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 2fr;
@@ -854,20 +865,17 @@ meter {
     font-size: calc(var(--font-size) * 4);
   }
   .thi-skill-img-con {
-    grid-column: 2/7;
+    grid-column: 2/11;
     grid-row: span 4;
     display: grid;
-    grid-template-columns: 2fr 1fr 1fr;
-    grid-template-rows: 2fr 1fr 1fr;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
   }
   .thi-skill-img-con .thi-skill-img-one {
-    grid-area: 3/1/3/3;
-  }
-  .thi-skill-img-con .thi-skill-img-two {
-    grid-area: 4/2/4/4;
+    display: none;
   }
   .fou-skill {
-    grid-column: 2/8;
+    grid-column: 2/11;
     margin-top: 6em;
   }
   .fou-skill .fou-skill-text-box {
@@ -898,5 +906,8 @@ meter {
   }
   .fou-skill-img-con P {
     grid-area: 1/2/5/4;
+  }
+  .adventure {
+    margin: 4em 0;
   }
 }/*# sourceMappingURL=skills.css.map */
