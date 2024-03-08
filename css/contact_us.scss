@@ -211,11 +211,11 @@
       font-size: stand.$font-size-p-big;
       font-weight: stand.$font-bold;
     }
-        a:hover {
-          color: stand.$color-orange;
-          border-bottom: 1px solid stand.$color-orange;
-          width: fit-content;
-        }
+    a:hover {
+      color: stand.$color-orange;
+      border-bottom: 1px solid stand.$color-orange;
+      width: fit-content;
+    }
   }
 }
 

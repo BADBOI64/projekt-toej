@@ -709,7 +709,8 @@ img {
     margin: 0 auto;
     width: 1080px;
   }
-  .process, .process-img {
+  .process,
+  .process-img {
     margin: auto;
     width: 439px;
   }

@@ -110,11 +110,11 @@
     p {
       font-size: stand.$font-size-p;
     }
-            a:hover {
-              color: stand.$color-orange;
-              border-bottom: 1px solid stand.$color-orange;
-              width: fit-content;
-            }
+    a:hover {
+      color: stand.$color-orange;
+      border-bottom: 1px solid stand.$color-orange;
+      width: fit-content;
+    }
   }
 
   .sec-case-yellow-arrow {
@@ -169,11 +169,11 @@
     p {
       font-size: stand.$font-size-p;
     }
-                a:hover {
-                  color: stand.$color-orange;
-                  border-bottom: 1px solid stand.$color-orange;
-                  width: fit-content;
-                }
+    a:hover {
+      color: stand.$color-orange;
+      border-bottom: 1px solid stand.$color-orange;
+      width: fit-content;
+    }
   }
 
   .thi-case-green-arrow {
@@ -245,60 +245,58 @@
       font-size: stand.$font-size-p-big;
       font-weight: stand.$font-bold;
     }
-                a:hover {
-                  color: stand.$color-green;
-                  border-bottom: 1px solid stand.$color-green;
-                  width: fit-content;
-                }
-
+    a:hover {
+      color: stand.$color-green;
+      border-bottom: 1px solid stand.$color-green;
+      width: fit-content;
+    }
   }
+}
+
+@media only screen and (max-width: 480px) {
+  .headline {
+    h1 {
+      font-size: stand.$font-size-medium-heading;
+    }
   }
 
-  @media only screen and (max-width: 480px) {
-    .headline {
-      h1 {
-        font-size: stand.$font-size-medium-heading;
+  .fir-case {
+    .fir-case-text-box {
+      a {
+        font-size: stand.$font-size-p-big;
       }
     }
-
-    .fir-case {
-      .fir-case-text-box {
-        a {
-          font-size: stand.$font-size-p-big;
-        }
-      }
-    }
-
-    .sec-case {
-      .sec-case-text-box {
-        a {
-          font-size: stand.$font-size-p-big;
-        }
-      }
-    }
-    .adventure {
-      margin: 4em 0;
-    }
   }
 
-  @media only screen and (max-width: 850px) {
-    .fir-case-img-one {
-      grid-area: 1 / 1 / 3 / 4 !important;
-    }
-    .fir-case-img-two {
-      grid-area: 2 / 1 / 4 / 4 !important;
-    }
-    .sec-case-img-one {
-      grid-area: 1 / 1 / 3 / 4 !important;
-    }
-    .sec-case-img-two {
-      grid-area: 2 / 1 / 4 / 4 !important;
-    }
-    .thi-case-img-one {
-      grid-area: 1 / 1 / 3 / 4 !important;
-    }
-    .thi-case-img-two {
-      grid-area: 2 / 1 / 4 / 4 !important;
+  .sec-case {
+    .sec-case-text-box {
+      a {
+        font-size: stand.$font-size-p-big;
+      }
     }
   }
+  .adventure {
+    margin: 4em 0;
+  }
+}
 
+@media only screen and (max-width: 850px) {
+  .fir-case-img-one {
+    grid-area: 1 / 1 / 3 / 4 !important;
+  }
+  .fir-case-img-two {
+    grid-area: 2 / 1 / 4 / 4 !important;
+  }
+  .sec-case-img-one {
+    grid-area: 1 / 1 / 3 / 4 !important;
+  }
+  .sec-case-img-two {
+    grid-area: 2 / 1 / 4 / 4 !important;
+  }
+  .thi-case-img-one {
+    grid-area: 1 / 1 / 3 / 4 !important;
+  }
+  .thi-case-img-two {
+    grid-area: 2 / 1 / 4 / 4 !important;
+  }
+}

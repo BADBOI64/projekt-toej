@@ -199,7 +199,7 @@ header {
       display: flex;
     }
 
-    div p{
+    div p {
       margin: -0.5em 0;
       padding-left: 0.3em;
       font-family: $font-family-secondary;
@@ -336,9 +336,9 @@ main {
         height: 40px;
         width: auto;
       }
-      div{
+      div {
         display: inline-block;
-        p{
+        p {
           font-family: $font-family-secondary;
         }
       }
@@ -432,7 +432,6 @@ main {
   .footer-con {
     display: flex;
     flex-wrap: wrap;
-    
   }
 
   .fa-bars-staggered {
