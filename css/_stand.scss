@@ -199,6 +199,12 @@ header {
       display: flex;
     }
 
+    div p{
+      margin: -0.5em 0;
+      padding-left: 0.3em;
+      font-family: $font-family-secondary;
+    }
+
     .header-contact {
       grid-column: 10 / 11;
       justify-content: flex-end;
@@ -330,6 +336,12 @@ main {
         height: 40px;
         width: auto;
       }
+      div{
+        display: inline-block;
+        p{
+          font-family: $font-family-secondary;
+        }
+      }
     }
     .footer-box2 {
       @include display-flex(column, flex-start, flex-start, 0.5rem);
@@ -420,6 +432,7 @@ main {
   .footer-con {
     display: flex;
     flex-wrap: wrap;
+    
   }
 
   .fa-bars-staggered {

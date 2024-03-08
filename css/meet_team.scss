@@ -214,8 +214,34 @@ img {
       font-size: stand.$font-size-p-big;
       font-weight: stand.$font-bold;
     }
+            a:hover {
+              color: stand.$color-green;
+              border-bottom: 1px solid stand.$color-green;
+              width: fit-content;
+            }
   }
 }
+
+@media only screen and (min-width: 1080px) {
+ .headline {
+  margin: 7em auto;
+  width: 1080px;
+ }
+ .gallery-team {
+  margin: 0 auto;
+  width: 1080px;
+}
+.process, .process-img {
+  margin: auto;
+  width: 439px;
+}
+.process-img {
+  margin: auto;
+  width: 439px;
+}
+
+}
+
 
 @media only screen and (max-width: 480px) {
   .headline {

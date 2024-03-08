@@ -69,6 +69,11 @@ header nav a {
   align-items: center;
   display: flex;
 }
+header nav div p {
+  margin: -0.5em 0;
+  padding-left: 0.3em;
+  font-family: "futura pt", sans-serif;
+}
 header nav .header-contact {
   grid-column: 10/11;
   justify-content: flex-end;
@@ -199,6 +204,12 @@ main {
 .footer-main .footer-con .footer-box1 img {
   height: 40px;
   width: auto;
+}
+.footer-main .footer-con .footer-box1 div {
+  display: inline-block;
+}
+.footer-main .footer-con .footer-box1 div p {
+  font-family: "futura pt", sans-serif;
 }
 .footer-main .footer-con .footer-box2 {
   display: flex;

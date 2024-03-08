@@ -53,6 +53,11 @@
     p {
       font-size: stand.$font-size-p;
     }
+    a:hover {
+      color: stand.$color-orange;
+      border-bottom: 1px solid stand.$color-orange;
+      width: fit-content;
+    }
   }
 
   .fir-case-green-arrow {
@@ -105,6 +110,11 @@
     p {
       font-size: stand.$font-size-p;
     }
+            a:hover {
+              color: stand.$color-orange;
+              border-bottom: 1px solid stand.$color-orange;
+              width: fit-content;
+            }
   }
 
   .sec-case-yellow-arrow {
@@ -159,6 +169,11 @@
     p {
       font-size: stand.$font-size-p;
     }
+                a:hover {
+                  color: stand.$color-orange;
+                  border-bottom: 1px solid stand.$color-orange;
+                  width: fit-content;
+                }
   }
 
   .thi-case-green-arrow {
@@ -230,6 +245,13 @@
       font-size: stand.$font-size-p-big;
       font-weight: stand.$font-bold;
     }
+                a:hover {
+                  color: stand.$color-green;
+                  border-bottom: 1px solid stand.$color-green;
+                  width: fit-content;
+                }
+
+  }
   }
 
   @media only screen and (max-width: 480px) {
@@ -279,4 +301,4 @@
       grid-area: 2 / 1 / 4 / 4 !important;
     }
   }
-}
+

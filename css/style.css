@@ -69,6 +69,11 @@ header nav a {
   align-items: center;
   display: flex;
 }
+header nav div p {
+  margin: -0.5em 0;
+  padding-left: 0.3em;
+  font-family: "futura pt", sans-serif;
+}
 header nav .header-contact {
   grid-column: 10/11;
   justify-content: flex-end;
@@ -199,6 +204,12 @@ main {
 .footer-main .footer-con .footer-box1 img {
   height: 40px;
   width: auto;
+}
+.footer-main .footer-con .footer-box1 div {
+  display: inline-block;
+}
+.footer-main .footer-con .footer-box1 div p {
+  font-family: "futura pt", sans-serif;
 }
 .footer-main .footer-con .footer-box2 {
   display: flex;
@@ -450,9 +461,6 @@ meter {
 .cases {
   padding: 7em 5em;
   grid-column: 1/13;
-  background-image: url(../img/caseseTingTing.svg);
-  background-repeat: no-repeat;
-  background-position: bottom 70% left;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   grid-column-gap: 20px;
@@ -718,6 +726,12 @@ meter {
 .who-we-are .who-we-are-text a {
   font-weight: 600;
 }
+.who-we-are .who-we-are-text a:hover {
+  color: #e09b62;
+  border-bottom: 1px solid #e09b62;
+  width: -moz-fit-content;
+  width: fit-content;
+}
 .who-we-are .who-we-are-img {
   grid-area: 2/2/3/7;
   max-width: 700px;
@@ -783,7 +797,8 @@ meter {
   .creative-solotion-con,
   .vision,
   .who-we-are,
-  .skills {
+  .skills,
+  .cases {
     margin: auto;
     width: 1080px;
   }
@@ -948,6 +963,12 @@ meter {
   .who-we-are .who-we-are-img {
     grid-area: 2/2/5/7;
     max-width: 700px;
+  }
+  .who-we-are a a:hover {
+    color: #e09b62;
+    border-bottom: 1px solid #e09b62;
+    width: -moz-max-content;
+    width: max-content;
   }
   .adventure {
     margin: 4em 0;

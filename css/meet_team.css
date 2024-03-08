@@ -69,6 +69,11 @@ header nav a {
   align-items: center;
   display: flex;
 }
+header nav div p {
+  margin: -0.5em 0;
+  padding-left: 0.3em;
+  font-family: "futura pt", sans-serif;
+}
 header nav .header-contact {
   grid-column: 10/11;
   justify-content: flex-end;
@@ -199,6 +204,12 @@ main {
 .footer-main .footer-con .footer-box1 img {
   height: 40px;
   width: auto;
+}
+.footer-main .footer-con .footer-box1 div {
+  display: inline-block;
+}
+.footer-main .footer-con .footer-box1 div p {
+  font-family: "futura pt", sans-serif;
 }
 .footer-main .footer-con .footer-box2 {
   display: flex;
@@ -682,7 +693,31 @@ img {
   font-size: calc(var(--font-size) * 1.5);
   font-weight: 600;
 }
+.adventure .adventure-text a:hover {
+  color: #386354;
+  border-bottom: 1px solid #386354;
+  width: -moz-fit-content;
+  width: fit-content;
+}
 
+@media only screen and (min-width: 1080px) {
+  .headline {
+    margin: 7em auto;
+    width: 1080px;
+  }
+  .gallery-team {
+    margin: 0 auto;
+    width: 1080px;
+  }
+  .process, .process-img {
+    margin: auto;
+    width: 439px;
+  }
+  .process-img {
+    margin: auto;
+    width: 439px;
+  }
+}
 @media only screen and (max-width: 480px) {
   .headline h1,
   .headline h2 {

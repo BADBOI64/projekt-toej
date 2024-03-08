@@ -20,9 +20,6 @@
 .cases {
   padding: 7em stand.$main-padding;
   grid-column: 1/13;
-  background-image: url(../img/caseseTingTing.svg);
-  background-repeat: no-repeat;
-  background-position: bottom 70% left;
   @include stand.display-grid;
   grid-template-rows: repeat(4, 1fr);
 
@@ -237,6 +234,11 @@
     a {
       font-weight: stand.$font-bold;
     }
+    a:hover {
+      color: stand.$color-orange;
+      border-bottom: 1px solid stand.$color-orange;
+      width: fit-content;
+    }
   }
 
   .who-we-are-img {
@@ -295,7 +297,8 @@
   .creative-solotion-con,
   .vision,
   .who-we-are,
-  .skills {
+  .skills,
+  .cases {
     margin: auto;
     width: 1080px;
   }
@@ -483,7 +486,16 @@
       grid-area: 2 / 2 / 5 / 7;
       max-width: 700px;
     }
+    a {
+      a:hover {
+        color: stand.$color-orange;
+        border-bottom: 1px solid stand.$color-orange;
+        width: max-content;
+      }
+    }
   }
+  
+     
 
   .adventure {
     margin: 4em 0;
@@ -503,7 +515,5 @@
 @media only screen and (max-width: 380px) {
   :root {
     --font-size: 8px;
-  }
-  h2 {
   }
 }
