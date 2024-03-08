@@ -2,6 +2,8 @@
 @import url("https://use.typekit.net/yqg7pai.css");
 :root {
   --font-size: 16px;
+  --font-size-p-mobile: 0px;
+  --font-size-big-heading-mobile: 0px;
 }
 
 .visually-hidden {
@@ -39,13 +41,6 @@ a {
   padding: 0;
 }
 
-a:hover {
-  color: #e09b62;
-  border-bottom: 1px solid #e09b62;
-  width: -moz-max-content;
-  width: max-content;
-}
-
 header {
   width: 100svw;
   z-index: 11;
@@ -69,13 +64,10 @@ header nav .fa-bars-staggered {
 }
 header nav a {
   white-space: nowrap;
-  font-size: calc(var(--font-size) * 1.2);
+  font-size: calc((var(--font-size) + var(--font-size-p-mobile)) * 1.2);
   font-weight: 600;
   align-items: center;
   display: flex;
-}
-header nav a:hover {
-  border: none;
 }
 header nav .header-contact {
   grid-column: 10/11;
@@ -148,6 +140,7 @@ main {
   background-image: url(../img/tingTing.svg);
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -159,7 +152,7 @@ main {
   color: #fafafa;
 }
 .contact .contact-form p {
-  font-size: calc(var(--font-size) * 1.2);
+  font-size: calc((var(--font-size) + var(--font-size-p-mobile)) * 1.2);
   color: #fafafa;
   text-align: center;
 }
@@ -241,6 +234,7 @@ main {
     --font-size: 14px;
   }
   .contact-form {
+    grid-column: 1/-1;
     width: 1080px;
     margin: auto;
   }
@@ -277,9 +271,19 @@ main {
     height: 40svh;
   }
 }
+@media only screen and (max-width: 950px) {
+  :root {
+    --font-size-big-heading-mobile: 3px;
+    --font-size-p-mobile: 3px;
+  }
+}
 @media only screen and (max-width: 768px) {
   :root {
     --font-size: 10px;
+  }
+  .contact-form {
+    grid-column: 1/-1;
+    height: auto;
   }
   .hero {
     height: 35svh;
@@ -320,6 +324,10 @@ main {
     flex-wrap: wrap;
     flex-direction: row;
     gap: 20px;
+  }
+  .contact-form {
+    grid-column: 1/-4;
+    height: auto;
   }
   .hero {
     height: 30svh;
@@ -470,8 +478,9 @@ meter {
 .headline h2 {
   grid-area: 2/4/3/13;
 }
-.headline h1, .headline h2 {
-  font-size: calc(var(--font-size) * 6);
+.headline h1,
+.headline h2 {
+  font-size: calc((var(--font-size) - var(--font-size-big-heading-mobile)) * 6);
   z-index: 10;
   display: flex;
   flex-direction: column;
@@ -488,7 +497,7 @@ meter {
   gap: 0;
 }
 .headline .headline-text-box p {
-  font-size: calc(var(--font-size) * 1.2);
+  font-size: calc((var(--font-size) + var(--font-size-p-mobile)) * 1.2);
   max-width: 800px;
 }
 
@@ -504,7 +513,7 @@ meter {
   gap: 40px;
 }
 .fir-creative .fir-creative-text-box p {
-  font-size: calc(var(--font-size) * 1.2);
+  font-size: calc((var(--font-size) + var(--font-size-p-mobile)) * 1.2);
 }
 .fir-creative .fir-creative-yellow-arrow {
   grid-area: 1/1/2/2;
@@ -602,7 +611,7 @@ meter {
   gap: 40px;
 }
 .fou-skill .fou-skill-text-box p {
-  font-size: calc(var(--font-size) * 1.2);
+  font-size: calc((var(--font-size) + var(--font-size-p-mobile)) * 1.2);
 }
 .fou-skill .fou-skill-green-arrow {
   grid-area: 1/1/2/2;
@@ -674,7 +683,7 @@ meter {
   justify-content: flex-start;
   align-items: center;
   gap: 2em;
-  font-size: calc(var(--font-size) * 1.2);
+  font-size: calc((var(--font-size) + var(--font-size-p-mobile)) * 1.2);
   z-index: 3;
 }
 .adventure .adventure-text h3 {
@@ -731,11 +740,11 @@ meter {
   }
   .sec-creative .sec-creative-text-one {
     grid-column: 3/11;
-    font-size: calc(var(--font-size) * 1.2);
+    font-size: calc((var(--font-size) + var(--font-size-p-mobile)) * 1.2);
   }
   .sec-creative .sec-creative-text-two {
     grid-column: 3/11;
-    font-size: calc(var(--font-size) * 1.2);
+    font-size: calc((var(--font-size) + var(--font-size-p-mobile)) * 1.2);
   }
   .fou-skill {
     grid-column: 2/12;

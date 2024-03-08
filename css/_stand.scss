@@ -1,18 +1,20 @@
-// LAVET AF EMIL
-
 @import url("https://use.typekit.net/yqg7pai.css");
 
 :root {
   --font-size: 16px;
+  --font-size-p-mobile: 0px;
+  --font-size-big-heading-mobile: 0px;
 }
 $font-family-primary: poppins, sans-serif;
 $font-family-secondary: "futura pt", sans-serif;
 
-$font-size-p: calc(var(--font-size) * 1.2);
+$font-size-p: calc((var(--font-size) + var(--font-size-p-mobile)) * 1.2);
 $font-size-p-big: calc(var(--font-size) * 1.5);
 $font-size-small-heading: calc(var(--font-size) * 2.5);
 $font-size-medium-heading: calc(var(--font-size) * 4);
-$font-size-large-heading: calc(var(--font-size) * 6);
+$font-size-large-heading: calc(
+  (var(--font-size) - var(--font-size-big-heading-mobile)) * 6
+);
 $font-bold: 600;
 $font-light: 300;
 $line-height: 1.5;
@@ -166,11 +168,6 @@ a {
   margin: 0;
   padding: 0;
 }
-a:hover {
-  color: $color-orange;
-  border-bottom: 1px solid $color-orange;
-  width: max-content;
-}
 
 // HEADER
 
@@ -201,9 +198,7 @@ header {
       align-items: center;
       display: flex;
     }
-    a:hover {
-      border: none;
-    }
+
     .header-contact {
       grid-column: 10 / 11;
       justify-content: flex-end;
@@ -264,7 +259,6 @@ main {
 
 /* Nyhedsbrev */
 
-
 .contact {
   @include display-grid;
 
@@ -277,6 +271,7 @@ main {
     background-image: url(../img/tingTing.svg);
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
 
     @include display-flex(column, center, center, 0);
 
@@ -320,8 +315,6 @@ main {
   }
 }
 
-
-
 .footer-main {
   padding: 3em $main-padding;
   background-color: $color-black;
@@ -362,28 +355,25 @@ main {
     --font-size: 14px;
   }
   .contact-form {
+    grid-column: 1/-1;
     width: 1080px;
     margin: auto;
   }
   .footer-con {
     display: flex;
     margin: auto;
-    
+
     justify-content: center;
     align-items: center;
-      .footer-box1 {
-        inline-size: 500px;
-      }
+    .footer-box1 {
+      inline-size: 500px;
+    }
   }
   .footer-buttombox {
     max-width: 1080px;
     margin: auto;
   }
-
-  
-
 }
-
 
 @media only screen and (max-width: 1300px) {
   :root {
@@ -395,7 +385,6 @@ main {
       inline-size: 500px;
     }
   }
-
 }
 
 @media only screen and (max-width: 1024px) {
@@ -406,16 +395,27 @@ main {
   .hero {
     height: 40svh;
   }
-
 }
+@media only screen and (max-width: 950px) {
+  :root {
+    --font-size-big-heading-mobile: 3px;
+    --font-size-p-mobile: 3px;
+  }
+}
+
 @media only screen and (max-width: 768px) {
   :root {
     --font-size: 10px;
   }
 
-    .hero {
-      height: 35svh;
-    }
+  .contact-form {
+    grid-column: 1/-1;
+    height: auto;
+  }
+
+  .hero {
+    height: 35svh;
+  }
 
   .footer-con {
     display: flex;
@@ -440,7 +440,6 @@ main {
   .email-submit {
     @include display-flex(row, space-around, center, 0);
   }
-
 }
 
 @media only screen and (max-width: 480px) {
@@ -457,11 +456,14 @@ main {
     gap: 20px;
   }
 
-    .hero {
-      height: 30svh;
-    }
+  .contact-form {
+    grid-column: 1/-4;
+    height: auto;
+  }
 
-
+  .hero {
+    height: 30svh;
+  }
 }
 
 @media only screen and (max-width: 320px) {

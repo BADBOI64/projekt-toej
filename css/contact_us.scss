@@ -1,4 +1,3 @@
-
 @use "stand";
 @use "cssReset";
 
@@ -56,7 +55,6 @@
   }
 }
 
-
 .contact-us-bg {
   display: grid;
   grid-column: 1/13;
@@ -69,6 +67,7 @@
 .contact-us-con {
   @include stand.display-flex(row-reverse, center, center, 2em);
   padding: 0 6em;
+  width: 90%;
 }
 .contact-us-form-img {
   img {
@@ -82,7 +81,6 @@
   display: grid;
   font-family: stand.$font-family-primary;
 
-
   a {
     text-decoration: underline;
     font-weight: stand.$font-bold;
@@ -94,7 +92,7 @@
   p {
     grid-area: 2 / 1 / 3 / 3;
     margin: 10px 0px 30px;
-    font-weight: stand.$font-bold; 
+    font-weight: stand.$font-bold;
   }
   #name {
     grid-area: 3 / 1 / 4 / 2;
@@ -102,7 +100,7 @@
   #secname {
     grid-area: 3 / 2 / 4 / 3;
   }
-  #email{
+  #email {
     grid-area: 4 / 1 / 5 / 3;
   }
   #message {
@@ -113,10 +111,8 @@
     grid-area: 7 / 1 / 8 / 2;
   }
   .submission {
-    grid-area: 7 / 2 / 8 / 3;  
+    grid-area: 7 / 2 / 8 / 3;
   }
-
-
 
   label {
     padding: 1em;
@@ -146,35 +142,29 @@
   }
   input[type="file"] {
     display: none;
-}
+  }
   input[type="submit"] {
     color: #fff;
     background-color: stand.$color-black;
     text-align: center;
     margin: 40px 20px 10px 0px;
     border-radius: 2px;
-}
-input[type="submit"]:hover {
-  background-color: stand.$color-green;
-  cursor: pointer;
+  }
+  input[type="submit"]:hover {
+    background-color: stand.$color-green;
+    cursor: pointer;
+  }
 }
 
-}
-
-#email::placeholder, 
-#name::placeholder, 
-#secname::placeholder, 
+#email::placeholder,
+#name::placeholder,
+#secname::placeholder,
 #message::placeholder {
   opacity: 0.5;
 }
 
-
 .section-form1 {
   display: flex;
-
-  label {
-    width: 30vh;
-  }
 }
 
 .visually-hidden {
@@ -221,10 +211,6 @@ input[type="submit"]:hover {
       font-size: stand.$font-size-p-big;
       font-weight: stand.$font-bold;
     }
-    a:hover {
-      color: stand.$color-orange;
-      border-bottom: 1px solid stand.$color-orange;
-    }
   }
 }
 
@@ -233,13 +219,12 @@ input[type="submit"]:hover {
     width: 1080px;
     margin: 7em auto;
   }
-  .contact-us-con, .adventure {
+  .contact-us-con,
+  .adventure {
     width: 1080px;
     margin: auto;
   }
-  
 }
-
 
 @media only screen and (max-width: 1024px) {
   :root {
@@ -250,9 +235,13 @@ input[type="submit"]:hover {
       margin-left: -20%;
     }
   }
-  
 }
 
+@media only screen and (max-width: 920px) {
+  .contact-us-con {
+    flex-direction: column-reverse;
+  }
+}
 @media only screen and (max-width: 768px) {
   :root {
     --font-size: 10px;
@@ -268,11 +257,11 @@ input[type="submit"]:hover {
   .contact-us-con {
     margin: auto;
     padding: 0;
-    
+
     p {
       inline-size: 400px;
     }
-    
+
     .contact-us-form-img {
       display: none;
     }
@@ -281,11 +270,35 @@ input[type="submit"]:hover {
 
 /* Normal mobil */
 
-@media only screen and (max-width: 480px){
+@media only screen and (max-width: 500px) {
+  #name {
+    grid-area: 3 / 1 / 4 / 3 !important;
+  }
+  #secname {
+    grid-area: 4 / 1 / 5 / 3 !important;
+  }
+  #email {
+    grid-area: 5 / 1 / 6 / 3 !important;
+  }
+  #message {
+    grid-area: 6 / 1 / 8 / 3 !important;
+    height: 100%;
+  }
+  #filelabel {
+    grid-area: 8 / 1 / 9 / 2 !important;
+  }
+  .submission {
+    grid-area: 8 / 2 / 9 / 3 !important;
+  }
+  .contact-us-bg {
+    padding: 0;
+  }
+}
+@media only screen and (max-width: 480px) {
   :root {
     --font-size: 8px;
   }
-  .headline{
+  .headline {
     h1 {
       margin-left: 10%;
     }
